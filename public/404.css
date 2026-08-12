@@ -7,7 +7,7 @@
   --ink: rgb(242 239 233 / 0.12);
   --radius-sm: 10px;
   --font-display: Georgia, "Palatino Linotype", Palatino, "Times New Roman", serif;
-  --font-ui: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-ui: system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 }
 
