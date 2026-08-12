@@ -1,0 +1,84 @@
+:root {
+  --bedrock: #131212;
+  --bone: #f2efe9;
+  --dust: #a8a399;
+  --amber: #f5a524;
+  --obsidian: #08090a;
+  --ink: rgb(242 239 233 / 0.12);
+  --radius-sm: 10px;
+  --font-display: Georgia, "Palatino Linotype", Palatino, "Times New Roman", serif;
+  --font-ui: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--bedrock);
+  color: var(--bone);
+  font-family: var(--font-ui);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}
+
+main {
+  max-width: 28rem;
+  text-align: left;
+}
+
+img {
+  width: 4.5rem;
+  height: auto;
+  margin-bottom: 1.5rem;
+  opacity: 0.85;
+}
+
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dust);
+  margin: 0 0 0.8rem;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 2.8rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin: 0 0 0.9rem;
+}
+
+p {
+  color: var(--dust);
+  line-height: 1.55;
+  margin: 0 0 1.6rem;
+}
+
+a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.85rem;
+  padding: 0.7rem 1.15rem;
+  background: var(--amber);
+  color: var(--obsidian);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--bone);
+  outline-offset: 3px;
+}
