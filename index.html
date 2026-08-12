@@ -64,38 +64,111 @@
 
     <main id="main">
       <section class="hero" aria-labelledby="hero-title">
-        <div class="wrap hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">
-              <span class="live-dot" aria-hidden="true"></span>
-              AI-native game studio · in construction
-            </p>
-            <h1 id="hero-title">
-              Describe a game.<br />
-              It actually <em class="hero-break">runs</em>.
-            </h1>
-            <p class="lede">
-              Not a moodboard. A live world, a crew of AI collaborators, and a
-              link strangers can play. Your git. Your editor. Your terminal.
-              Same powers.
-            </p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="#waitlist">Get early access</a>
-              <a class="btn btn-ghost" href="#how">See how it works</a>
+        <div class="poster" data-world="whale" data-worlds aria-label="A live world that changes with each sentence">
+          <div class="poster-stage" aria-hidden="true">
+            <div class="biome biome-whale is-on">
+              <div class="w-sky"></div>
+              <div class="w-moon"></div>
+              <div class="w-sea"></div>
+              <div class="w-body">
+                <span class="w-stripe"></span>
+                <span class="w-stripe w-stripe-2"></span>
+                <span class="w-eye"></span>
+                <span class="w-fin"></span>
+                <span class="w-spout"></span>
+              </div>
+              <div class="w-train">
+                <span class="w-car w-engine"></span>
+                <span class="w-car"></span>
+                <span class="w-car"></span>
+                <span class="w-car"></span>
+                <span class="w-car"></span>
+              </div>
+              <div class="w-thief"></div>
+            </div>
+
+            <div class="biome biome-kitchen">
+              <div class="k-wall"></div>
+              <div class="k-tile"></div>
+              <div class="k-counter"></div>
+              <div class="k-banner">LOCAL 12</div>
+              <div class="k-knives">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <div class="k-pots">
+                <i></i><i></i><i></i>
+              </div>
+              <div class="k-steward"></div>
+            </div>
+
+            <div class="biome biome-gravity">
+              <div class="g-void"></div>
+              <div class="g-grid"></div>
+              <div class="g-city-up"></div>
+              <div class="g-city-down"></div>
+              <div class="g-slab"></div>
+              <div class="g-walker"></div>
+              <div class="g-orbs"><i></i><i></i><i></i></div>
+              <div class="g-clock">6:01</div>
+            </div>
+
+            <div class="biome biome-candy">
+              <div class="c-sky"></div>
+              <div class="c-moon">
+                <span class="c-bite"></span>
+                <span class="c-face"></span>
+              </div>
+              <div class="c-ladder">
+                <i></i><i></i><i></i><i></i><i></i>
+              </div>
+              <div class="c-crumbs"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="c-eater"></div>
             </div>
           </div>
 
-          <figure class="keyart" aria-label="A cinematic still of an unnamed game world">
-            <div class="keyart-sky" aria-hidden="true"></div>
-            <div class="keyart-sun" aria-hidden="true"></div>
-            <div class="keyart-haze" aria-hidden="true"></div>
-            <div class="keyart-grid" aria-hidden="true"></div>
-            <img class="keyart-monument" src="/brand/trike-mark-white.svg" width="352" height="368" alt="" />
-            <figcaption class="keyart-card">
-              <p class="keyart-kicker">untitled · live</p>
-              <p class="keyart-line" id="prompt-line">a heist on a train that is also a whale</p>
-            </figcaption>
-          </figure>
+          <div class="hero-overlay">
+            <div class="wrap hero-copy">
+              <p class="eyebrow">
+                <span class="live-dot" aria-hidden="true"></span>
+                The game studio that fits in a sentence
+              </p>
+              <h1 id="hero-title">
+                Describe a game.<br />
+                It actually <em class="hero-break">runs</em>.
+              </h1>
+              <p class="lede">
+                Not a moodboard. A live world, a crew of AI collaborators, and a
+                link strangers can play. Your git. Your editor. Your terminal.
+                Same powers.
+              </p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="#waitlist">Get early access</a>
+                <a class="btn btn-ghost" href="#how">See how it works</a>
+              </div>
+            </div>
+          </div>
+
+          <img class="poster-stamp" src="/brand/trike-mark-white.svg" width="48" height="50" alt="" />
+          <p class="poster-live"><span class="live-dot" aria-hidden="true"></span> Live world</p>
+          <p class="poster-title" data-world-title>a heist on a train that is also a whale</p>
+
+          <div class="prompt-bar">
+            <p class="prompt-label" id="world-label">Try a sentence</p>
+            <div class="chips" role="group" aria-labelledby="world-label">
+              <button type="button" class="chip is-on" data-world="whale" aria-pressed="true">
+                a heist on a train that is also a whale
+              </button>
+              <button type="button" class="chip" data-world="kitchen" aria-pressed="false">
+                a kitchen where the knives have unionized
+              </button>
+              <button type="button" class="chip" data-world="gravity" aria-pressed="false">
+                gravity is optional after 6pm
+              </button>
+              <button type="button" class="chip" data-world="candy" aria-pressed="false">
+                the moon is a puzzle you can eat
+              </button>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -163,10 +236,16 @@
                   <span class="chrome-title">Live world</span>
                   <span class="chrome-meta"><span class="live-dot" aria-hidden="true"></span>running</span>
                 </div>
-                <div class="world-plate" aria-hidden="true">
-                  <div class="world-sun"></div>
-                  <div class="world-bands"></div>
-                  <img class="world-mark" src="/brand/trike-mark-white.svg" alt="" />
+                <div class="mini-biome mini-whale" aria-hidden="true">
+                  <div class="w-body">
+                    <span class="w-eye"></span>
+                    <span class="w-fin"></span>
+                  </div>
+                  <div class="w-train">
+                    <span class="w-car w-engine"></span>
+                    <span class="w-car"></span>
+                    <span class="w-car"></span>
+                  </div>
                 </div>
               </div>
 
@@ -223,10 +302,9 @@
                   <span class="url-pill">play.ontrike.com/heist-whale</span>
                   <span class="chrome-meta"><span class="live-dot" aria-hidden="true"></span>live</span>
                 </div>
-                <div class="world-plate world-plate-ship" aria-hidden="true">
-                  <div class="world-sun"></div>
-                  <div class="world-bands"></div>
-                  <img class="world-mark" src="/brand/trike-mark-white.svg" alt="" />
+                <div class="mini-biome mini-candy" aria-hidden="true">
+                  <div class="c-moon"><span class="c-bite"></span></div>
+                  <div class="c-ladder"><i></i><i></i><i></i></div>
                 </div>
               </div>
             </div>

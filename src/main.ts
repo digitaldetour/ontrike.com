@@ -1,7 +1,7 @@
 import "./styles.css";
 import { bindWaitlistForm } from "./waitlist";
 
-const PROMPT = "a heist on a train that is also a whale";
+const WORLDS = ["whale", "kitchen", "gravity", "candy"] as const;
 
 function prefersReducedMotion(): boolean {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -19,34 +19,53 @@ function initNav(): void {
   window.addEventListener("scroll", onScroll, { passive: true });
 }
 
-function initPrompt(): void {
-  const line = document.getElementById("prompt-line");
-  if (!line) return;
+function initWorlds(): void {
+  const root = document.querySelector<HTMLElement>("[data-worlds]");
+  if (!root) return;
 
-  if (prefersReducedMotion()) {
-    line.textContent = PROMPT;
-    return;
-  }
-
-  line.replaceChildren();
-  const text = document.createElement("span");
-  const cursor = document.createElement("span");
-  cursor.className = "prompt-cursor";
-  cursor.setAttribute("aria-hidden", "true");
-  line.append(text, cursor);
-
+  const chips = [...root.querySelectorAll<HTMLButtonElement>(".chip[data-world]")];
+  const biomes = [...root.querySelectorAll<HTMLElement>(".biome")];
+  const title = root.querySelector<HTMLElement>("[data-world-title]");
   let index = 0;
-  const tick = () => {
-    index += 1;
-    text.textContent = PROMPT.slice(0, index);
-    if (index < PROMPT.length) {
-      window.setTimeout(tick, index > 18 ? 28 : 42);
-    } else {
-      cursor.classList.add("is-done");
-    }
+  let timer = 0;
+
+  const show = (world: string) => {
+    root.dataset.world = world;
+    chips.forEach((chip) => {
+      const on = chip.dataset.world === world;
+      chip.classList.toggle("is-on", on);
+      chip.setAttribute("aria-pressed", on ? "true" : "false");
+      if (on && title) {
+        title.textContent = chip.textContent?.trim() ?? "";
+      }
+    });
+    biomes.forEach((biome) => {
+      biome.classList.toggle("is-on", biome.classList.contains(`biome-${world}`));
+    });
+    const next = WORLDS.indexOf(world as (typeof WORLDS)[number]);
+    index = next === -1 ? 0 : next;
   };
 
-  window.setTimeout(tick, 280);
+  const stopCycle = () => {
+    window.clearInterval(timer);
+    timer = 0;
+  };
+
+  chips.forEach((chip) => {
+    chip.addEventListener("click", () => {
+      stopCycle();
+      show(chip.dataset.world ?? "whale");
+    });
+  });
+
+  show(root.dataset.world ?? "whale");
+
+  if (!prefersReducedMotion()) {
+    timer = window.setInterval(() => {
+      index = (index + 1) % WORLDS.length;
+      show(WORLDS[index]);
+    }, 4500);
+  }
 }
 
 function initReveal(): void {
@@ -154,7 +173,7 @@ function initWaitlists(): void {
 }
 
 initNav();
-initPrompt();
+initWorlds();
 initReveal();
 initStory();
 initTabs();
