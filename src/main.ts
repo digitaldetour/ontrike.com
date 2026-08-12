@@ -1,8 +1,7 @@
 import "./styles.css";
 import { bindWaitlistForm } from "./waitlist";
 
-const PROMPT =
-  "a dusk platformer. the moon is a puzzle. jump to tilt gravity.";
+const PROMPT = "a heist on a train that is also a whale";
 
 function prefersReducedMotion(): boolean {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -22,12 +21,10 @@ function initNav(): void {
 
 function initPrompt(): void {
   const line = document.getElementById("prompt-line");
-  const actor = document.querySelector<HTMLElement>("[data-hero-stage] .stage-actor");
   if (!line) return;
 
   if (prefersReducedMotion()) {
     line.textContent = PROMPT;
-    actor?.classList.add("is-in");
     return;
   }
 
@@ -42,14 +39,10 @@ function initPrompt(): void {
   const tick = () => {
     index += 1;
     text.textContent = PROMPT.slice(0, index);
-    if (index === 18) {
-      actor?.classList.add("is-in");
-    }
     if (index < PROMPT.length) {
-      window.setTimeout(tick, index > 24 ? 26 : 40);
+      window.setTimeout(tick, index > 18 ? 28 : 42);
     } else {
       cursor.classList.add("is-done");
-      actor?.classList.add("is-in");
     }
   };
 
@@ -77,69 +70,13 @@ function initReveal(): void {
   nodes.forEach((node) => io.observe(node));
 }
 
-function initProof(): void {
-  const dial = document.querySelector<HTMLInputElement>("#proof-gravity");
-  const gRead = document.querySelector("[data-proof-g]");
-  const hudG = document.querySelector("[data-proof-hud-g]");
-  const ms = document.querySelector("[data-proof-ms]");
-  const state = document.querySelector("[data-proof-state]");
-  const score = document.querySelector("[data-proof-score]");
-  const moon = document.querySelector<HTMLElement>("[data-proof-moon]");
-  const actor = document.querySelector<HTMLElement>("[data-proof-actor]");
-  const flash = document.querySelector<HTMLElement>("[data-proof-flash]");
-  if (!dial || !gRead || !hudG || !ms || !state || !score) return;
-
-  let swaps = 0;
-  const SCORE = "SCORE 0420";
-
-  const paint = () => {
-    const g = Number(dial.value) / 100;
-    gRead.textContent = g.toFixed(2);
-    hudG.textContent = `g ${g.toFixed(2)}`;
-    score.textContent = SCORE;
-    if (moon) {
-      const size = 2.4 + (g - 0.6) * 1.1;
-      moon.style.width = `${size}rem`;
-      moon.style.height = `${size}rem`;
-    }
-    if (actor) {
-      actor.style.animationDuration = `${Math.max(1.3, 2.6 / g)}s`;
-    }
-  };
-
-  const swap = () => {
-    swaps += 1;
-    const duration = 640 + ((swaps * 37) % 562);
-    ms.textContent = `${duration}ms`;
-    state.textContent = `swap ${swaps} · ${duration}ms`;
-    score.textContent = SCORE;
-    if (flash) {
-      flash.hidden = false;
-      window.setTimeout(() => {
-        flash.hidden = true;
-      }, 380);
-    }
-    paint();
-  };
-
-  dial.addEventListener("input", () => {
-    if (prefersReducedMotion()) {
-      paint();
-      score.textContent = SCORE;
-      return;
-    }
-    swap();
-  });
-  paint();
-}
-
 function initStory(): void {
   const steps = document.querySelectorAll<HTMLElement>("[data-story-step]");
   const stage = document.querySelector<HTMLElement>("[data-story-stage]");
   if (!steps.length || !stage) return;
 
   const activate = (step: HTMLElement) => {
-    const id = step.dataset.storyStep ?? "door";
+    const id = step.dataset.storyStep ?? "describe";
     stage.dataset.active = id;
     steps.forEach((node) => node.classList.toggle("is-active", node === step));
   };
@@ -147,7 +84,7 @@ function initStory(): void {
   const fromHash = () => {
     const hash = window.location.hash.slice(1);
     if (!hash) return;
-    const match = document.querySelector<HTMLElement>(`[data-story-step="${hash}"], #${CSS.escape(hash)}[data-story-step]`);
+    const match = document.querySelector<HTMLElement>(`[data-story-step="${CSS.escape(hash)}"]`);
     if (match) activate(match);
   };
 
@@ -169,77 +106,47 @@ function initStory(): void {
   steps.forEach((step) => io.observe(step));
 }
 
-function initDials(): void {
-  const gravity = document.querySelector<HTMLInputElement>("#dial-gravity");
-  const moon = document.querySelector<HTMLInputElement>("#dial-moon");
-  const jump = document.querySelector<HTMLInputElement>("#dial-jump");
-  const moonEl = document.querySelector<HTMLElement>("[data-dial-moon]");
-  const actor = document.querySelector<HTMLElement>("[data-dial-actor]");
-  const gravityRead = document.querySelector('[data-dial-readout="gravity"]');
-  const moonRead = document.querySelector('[data-dial-readout="moon"]');
-  const jumpRead = document.querySelector('[data-dial-readout="jump"]');
+function initTabs(): void {
+  const tabs = document.querySelectorAll<HTMLButtonElement>("[data-tab]");
+  const panels = document.querySelectorAll<HTMLElement>("[data-panel]");
+  if (!tabs.length) return;
 
-  const paint = () => {
-    const g = Number(gravity?.value ?? 120) / 100;
-    const m = Number(moon?.value ?? 80) / 100;
-    const j = Number(jump?.value ?? 40) / 10;
-    if (gravityRead) gravityRead.textContent = g.toFixed(2);
-    if (moonRead) moonRead.textContent = m.toFixed(2);
-    if (jumpRead) jumpRead.textContent = j.toFixed(1);
-    if (moonEl) {
-      const size = 2.2 + m * 1.6;
-      moonEl.style.width = `${size}rem`;
-      moonEl.style.height = `${size}rem`;
-    }
-    if (actor) {
-      actor.style.setProperty("bottom", `${4.2 + (j - 4) * 0.35}rem`);
-      actor.style.animationDuration = `${Math.max(1.4, 2.8 / g)}s`;
-      actor.classList.add("is-in");
-    }
+  const select = (id: string) => {
+    tabs.forEach((tab) => {
+      const on = tab.dataset.tab === id;
+      tab.setAttribute("aria-selected", on ? "true" : "false");
+    });
+    panels.forEach((panel) => {
+      panel.hidden = panel.dataset.panel !== id;
+    });
   };
 
-  gravity?.addEventListener("input", paint);
-  moon?.addEventListener("input", paint);
-  jump?.addEventListener("input", paint);
-  paint();
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      select(tab.dataset.tab ?? "cli");
+    });
+  });
 }
 
-function initHotReload(): void {
-  const state = document.querySelector("[data-swap-state]");
-  const ms = document.querySelector("[data-swap-ms]");
-  const flash = document.querySelector<HTMLElement>("[data-swap-flash]");
-  const line = document.querySelector("[data-hot-line]");
-  if (!state || !ms || !flash || !line) return;
-
-  let swap = 47;
-  const gravities = ["1.15", "1.22", "1.08", "1.18"];
-
-  const tick = () => {
-    swap = swap >= 90 ? 12 : swap + 1;
-    const duration = 640 + ((swap * 37) % 562);
-    state.textContent = `swap ${swap}/90 · ${duration}ms`;
-    ms.textContent = `${duration}ms`;
-    line.textContent = `  world.gravity = ${gravities[swap % gravities.length]};`;
-    flash.hidden = false;
-    window.setTimeout(() => {
-      flash.hidden = true;
-    }, 420);
-  };
-
-  const mock = document.querySelector('[data-mock="reload"]');
-  if (!mock || prefersReducedMotion()) return;
-
-  let timer: ReturnType<typeof window.setInterval> | undefined;
-  const io = new IntersectionObserver((entries) => {
-    const on = entries.some((entry) => entry.isIntersecting);
-    if (on && timer === undefined) {
-      timer = window.setInterval(tick, 2400);
-    } else if (!on && timer !== undefined) {
-      window.clearInterval(timer);
-      timer = undefined;
-    }
+function initCopy(): void {
+  document.querySelectorAll<HTMLButtonElement>("[data-copy]").forEach((button) => {
+    button.addEventListener("click", async () => {
+      const id = button.dataset.copy;
+      const target = document.querySelector(`[data-copy-target="${id}"]`);
+      if (!target) return;
+      const text = target.textContent ?? "";
+      try {
+        await navigator.clipboard.writeText(text.trim() + "\n");
+        const prior = button.textContent;
+        button.textContent = "Copied";
+        window.setTimeout(() => {
+          button.textContent = prior;
+        }, 1400);
+      } catch {
+        button.textContent = "Copy failed";
+      }
+    });
   });
-  io.observe(mock);
 }
 
 function initWaitlists(): void {
@@ -249,8 +156,7 @@ function initWaitlists(): void {
 initNav();
 initPrompt();
 initReveal();
-initProof();
 initStory();
-initDials();
-initHotReload();
+initTabs();
+initCopy();
 initWaitlists();

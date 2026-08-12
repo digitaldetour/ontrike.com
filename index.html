@@ -5,28 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="dark" />
     <meta name="theme-color" content="#131212" />
-    <title>Trike — Describe a game. Watch it materialise.</title>
+    <title>Trike — Describe a game. It actually runs.</title>
     <meta
       name="description"
-      content="Trike is an AI-native game IDE. Describe a game, watch it materialise in a live running preview, iterate in conversation or in code, and ship it to a URL."
+      content="Trike is an AI-native game studio in a box. Describe a game, watch a live world appear, steer it in chat or code, and ship a link strangers can play. MCP, CLI, and Studio share one API."
     />
     <link rel="canonical" href="https://ontrike.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Trike" />
     <meta property="og:url" content="https://ontrike.com/" />
-    <meta property="og:title" content="Trike — Describe a game. Watch it materialise." />
+    <meta property="og:title" content="Trike — Describe a game. It actually runs." />
     <meta
       property="og:description"
-      content="An AI-native game IDE. Describe a game, watch a live preview start, iterate in conversation or in code, ship it to a URL."
+      content="An AI-native game studio in a box. Describe a game. A live world appears. Ship a link. Your tools can build games too."
     />
     <meta property="og:image" content="https://ontrike.com/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Trike — Describe a game. Watch it materialise." />
+    <meta name="twitter:title" content="Trike — Describe a game. It actually runs." />
     <meta
       name="twitter:description"
-      content="An AI-native game IDE. Describe a game, watch a live preview start, iterate in conversation or in code, ship it to a URL."
+      content="An AI-native game studio in a box. Describe a game. A live world appears. Ship a link. Your tools can build games too."
     />
     <meta name="twitter:image" content="https://ontrike.com/og.png" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -37,10 +37,10 @@
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "Trike",
-        "applicationCategory": "DeveloperApplication",
+        "applicationCategory": "GameApplication",
         "operatingSystem": "Web",
         "url": "https://ontrike.com/",
-        "description": "Trike is an AI-native game IDE. Describe a game, watch it materialise in a live running preview, iterate in conversation or in code, and ship it to a URL."
+        "description": "Trike is an AI-native game studio in a box. Describe a game, watch a live world appear, and ship a link strangers can play."
       }
     </script>
   </head>
@@ -55,538 +55,328 @@
           <span class="brand-word">Trike</span>
         </a>
         <nav class="header-nav" aria-label="Page">
-          <a href="#loop">The loop</a>
-          <a href="#agents">Agents</a>
+          <a href="#how">How it works</a>
+          <a href="#agents-too">For agents</a>
         </nav>
-        <a class="btn btn-primary btn-compact" href="#waitlist">Join the waitlist</a>
+        <a class="btn btn-primary btn-compact" href="#waitlist">Get early access</a>
       </div>
     </header>
 
     <main id="main">
       <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-glow" aria-hidden="true"></div>
-        <img
-          class="hero-mark"
-          src="/brand/trike-mark-white.svg"
-          width="352"
-          height="368"
-          alt=""
-          aria-hidden="true"
-        />
         <div class="wrap hero-grid">
           <div class="hero-copy">
             <p class="eyebrow">
               <span class="live-dot" aria-hidden="true"></span>
-              AI-native game IDE · Studio in construction
+              AI-native game studio · in construction
             </p>
             <h1 id="hero-title">
               Describe a game.<br />
-              Watch it <em class="hero-break">materialise</em>.
+              It actually <em class="hero-break">runs</em>.
             </h1>
             <p class="lede">
-              First run is one field. Name the impossible thing. A live preview
-              starts. Iterate in the conversation or in the file. Ship a URL.
-              Strangers play first.
+              Not a moodboard. A live world, a crew of AI collaborators, and a
+              link strangers can play. Your git. Your editor. Your terminal.
+              Same powers.
             </p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#waitlist">Get early access</a>
-              <a class="btn btn-ghost" href="#loop">See the Door</a>
+              <a class="btn btn-ghost" href="#how">See how it works</a>
             </div>
           </div>
 
-          <figure class="studio studio-hero" aria-label="Trike Studio with The Door and a live preview">
-            <div class="studio-chrome">
-              <span class="studio-traffic" aria-hidden="true"><i></i><i></i><i></i></span>
-              <span class="studio-title">Trike Studio</span>
-              <span class="studio-state"><span class="live-dot" aria-hidden="true"></span>preview · running</span>
-            </div>
-            <div class="studio-grid">
-              <div class="studio-side">
-                <div class="side-kicker">The Door</div>
-                <p class="side-label">Describe a game</p>
-                <p class="prompt-line" id="prompt-line">
-                  a dusk platformer. the moon is a puzzle. jump to tilt gravity.
-                </p>
-                <ul class="side-log">
-                  <li><span>Amber</span> materialising preview</li>
-                  <li><span>Director</span> dusk, puzzle-moon, tilt</li>
-                  <li class="is-live"><span>Builder</span> stage live</li>
-                </ul>
-              </div>
-              <div class="stage" data-hero-stage>
-                <div class="stage-hud">
-                  <span>dusk-moon</span>
-                  <span class="score">SCORE 0000</span>
-                </div>
-                <div class="stage-moon"></div>
-                <div class="stage-ledge stage-ledge-a"></div>
-                <div class="stage-ledge stage-ledge-b"></div>
-                <div class="stage-ledge stage-ledge-c"></div>
-                <img class="stage-actor is-in" src="/brand/trike-mark-white.svg" width="88" height="92" alt="" />
-              </div>
-            </div>
-            <div class="studio-foot">
-              <span>git clean</span>
-              <span>Amber · engine</span>
-              <span>Review pending</span>
-            </div>
+          <figure class="keyart" aria-label="A cinematic still of an unnamed game world">
+            <div class="keyart-sky" aria-hidden="true"></div>
+            <div class="keyart-sun" aria-hidden="true"></div>
+            <div class="keyart-haze" aria-hidden="true"></div>
+            <div class="keyart-grid" aria-hidden="true"></div>
+            <img class="keyart-monument" src="/brand/trike-mark-white.svg" width="352" height="368" alt="" />
+            <figcaption class="keyart-card">
+              <p class="keyart-kicker">untitled · live</p>
+              <p class="keyart-line" id="prompt-line">a heist on a train that is also a whale</p>
+            </figcaption>
           </figure>
+        </div>
+      </section>
+
+      <section class="breath" aria-labelledby="breath-title">
+        <div class="wrap">
+          <h2 id="breath-title">
+            <span class="line-bone">Trike is a game studio</span>
+            <span class="line-amber">that fits in a sentence.</span>
+          </h2>
+          <p class="breath-copy" data-reveal>
+            You describe the game. A world appears and keeps running. You steer
+            it in chat or in code. Collaborators — direction, structure, build,
+            critique, taste — work the same project you do. When it feels
+            expensive, you publish a URL. The repo stays yours.
+          </p>
         </div>
       </section>
 
       <section class="sentence-band" aria-labelledby="sentence-title">
         <div class="wrap">
-          <header class="section-head" data-reveal>
-            <p class="section-kicker">What it is</p>
-            <h2 id="sentence-title">
-              <span class="line-bone">One editor.</span>
-              <span class="line-amber">The whole loop.</span>
-            </h2>
-          </header>
+          <p class="section-kicker">In one breath</p>
+          <h2 id="sentence-title" class="visually-hidden">What you can do</h2>
           <p class="sentence" data-reveal>
             Trike is
-            <a href="#door">The Door</a>,
-            <a href="#reload">hot-reload that keeps your score</a>,
-            <a href="#dials">dials on the running world</a>,
-            <a href="#agents">a studio of agents</a>,
-            an <a href="#ledger">Obsession Ledger</a>,
-            a <a href="#morning">Morning Report</a>,
-            a URL on <a href="#ship">play.ontrike.com</a>,
-            and <a href="#git">git that stays yours</a>.
-            Not a chatbot with a hard hat. A lot, on purpose.
+            <a href="#describe">describe a game</a>,
+            <a href="#world">watch a live world appear</a>,
+            <a href="#steer">steer it without killing the run</a>,
+            <a href="#crew">build with a whole AI crew</a>,
+            <a href="#polish">obsess over how it feels</a>,
+            <a href="#ship">ship a link people can play</a>,
+            and
+            <a href="#agents-too">let Cursor, Claude Code, or a terminal do the same</a>.
           </p>
         </div>
       </section>
 
-      <section class="proof" id="proof" aria-labelledby="proof-title">
+      <section class="story" id="how" aria-labelledby="how-title">
         <div class="wrap">
           <header class="section-head" data-reveal>
-            <p class="section-kicker">M0 spike</p>
-            <h2 id="proof-title">
-              <span class="line-bone">Hot-reload that keeps your score.</span>
-              <span class="line-amber">We measured it because we didn’t believe it.</span>
+            <p class="section-kicker">How it works</p>
+            <h2 id="how-title">
+              <span class="line-bone">From a sentence</span>
+              <span class="line-amber">to a world people play.</span>
             </h2>
-            <p class="section-lede">
-              Scrub gravity. The world updates. The score does not. Ninety swaps
-              on M0, P95 1202ms, zero losses — not bad, for a reload.
-            </p>
-          </header>
-
-          <figure class="studio proof-widget" aria-label="Interactive hot-reload demo">
-            <div class="studio-chrome">
-              <span class="studio-traffic" aria-hidden="true"><i></i><i></i><i></i></span>
-              <span class="studio-title">dusk-moon · live</span>
-              <span class="studio-state" data-proof-state>swap 0 · idle</span>
-            </div>
-            <div class="studio-grid">
-              <div class="dials-pane">
-                <label class="dial-row">
-                  <span>Gravity <em data-proof-g>1.20</em></span>
-                  <input id="proof-gravity" type="range" min="60" max="180" value="120" />
-                </label>
-                <p class="side-whisper">
-                  This is the edit. The stage is the game. Score is locked at 0420
-                  because that’s the whole point.
-                </p>
-                <p class="proof-live">
-                  Last swap <strong data-proof-ms>—</strong>
-                  · score held
-                </p>
-              </div>
-              <div class="stage stage-compact" data-proof-stage>
-                <div class="stage-hud">
-                  <span data-proof-hud-g>g 1.20</span>
-                  <span class="score" data-proof-score>SCORE 0420</span>
-                </div>
-                <div class="stage-moon" data-proof-moon></div>
-                <div class="stage-ledge stage-ledge-a"></div>
-                <div class="stage-ledge stage-ledge-c"></div>
-                <img
-                  class="stage-actor is-in"
-                  data-proof-actor
-                  src="/brand/trike-mark-white.svg"
-                  width="72"
-                  height="75"
-                  alt=""
-                />
-                <div class="swap-flash" data-proof-flash hidden>swap · score held</div>
-              </div>
-            </div>
-          </figure>
-
-          <ul class="proof-grid">
-            <li>
-              <p class="proof-value">1202<span>ms</span></p>
-              <p class="proof-label">P95 edit → visible</p>
-              <p class="proof-note">90 swaps</p>
-            </li>
-            <li>
-              <p class="proof-value">0</p>
-              <p class="proof-label">Score losses</p>
-              <p class="proof-note">The run stayed the run</p>
-            </li>
-            <li>
-              <p class="proof-value">1222</p>
-              <p class="proof-label">Tests green</p>
-              <p class="proof-note">The suite that gates a swap</p>
-            </li>
-            <li>
-              <p class="proof-value">1:1</p>
-              <p class="proof-label">Deterministic replays</p>
-              <p class="proof-note">Same input. Same world.</p>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="story" id="loop" aria-labelledby="loop-title">
-        <div class="wrap">
-          <header class="section-head" data-reveal>
-            <p class="section-kicker">The loop</p>
-            <h2 id="loop-title">
-              <span class="line-bone">Studio is a running world.</span>
-              <span class="line-amber">Not a form you submit.</span>
-            </h2>
-            <p class="section-lede">
-              Scroll the list. The preview on the right is the product — fake
-              chrome, real shape. Amber runs it while you work.
-            </p>
           </header>
 
           <div class="story-layout">
-            <div class="story-visual" data-story-stage data-active="door">
-              <div class="studio story-mock" data-mock="door">
-                <div class="studio-chrome">
-                  <span class="studio-traffic" aria-hidden="true"><i></i><i></i><i></i></span>
-                  <span class="studio-title">The Door</span>
-                  <span class="studio-state"><span class="live-dot" aria-hidden="true"></span>first run</span>
+            <div class="story-visual" data-story-stage data-active="describe">
+              <div class="chrome story-mock" data-mock="describe">
+                <div class="chrome-bar">
+                  <span class="chrome-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="chrome-title">New game</span>
+                  <span class="chrome-meta">first run</span>
                 </div>
-                <div class="studio-grid">
-                  <div class="studio-side">
-                    <div class="side-kicker">Describe a game</div>
-                    <p class="prompt-line is-static">
-                      a dusk platformer. the moon is a puzzle. jump to tilt gravity.
-                    </p>
-                    <p class="side-whisper">Name the impossible thing. Don’t pick a template.</p>
-                  </div>
-                  <div class="stage stage-compact">
-                    <div class="stage-moon"></div>
-                    <div class="stage-ledge stage-ledge-a"></div>
-                    <div class="stage-ledge stage-ledge-c"></div>
-                    <img class="stage-actor is-in" src="/brand/trike-mark-white.svg" width="72" height="75" alt="" />
+                <div class="prompt-sheet">
+                  <p class="prompt-label">Describe a game</p>
+                  <p class="prompt-body">a heist on a train that is also a whale</p>
+                  <p class="prompt-note">One field. No template picker. The world is the answer.</p>
+                </div>
+              </div>
+
+              <div class="chrome story-mock" data-mock="world">
+                <div class="chrome-bar">
+                  <span class="chrome-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="chrome-title">Live world</span>
+                  <span class="chrome-meta"><span class="live-dot" aria-hidden="true"></span>running</span>
+                </div>
+                <div class="world-plate" aria-hidden="true">
+                  <div class="world-sun"></div>
+                  <div class="world-bands"></div>
+                  <img class="world-mark" src="/brand/trike-mark-white.svg" alt="" />
+                </div>
+              </div>
+
+              <div class="chrome story-mock" data-mock="steer">
+                <div class="chrome-bar">
+                  <span class="chrome-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="chrome-title">Steer</span>
+                  <span class="chrome-meta">chat · code · dials</span>
+                </div>
+                <div class="steer-grid">
+                  <pre class="code-pane" tabindex="0"><code><span class="code-dim">// the world is already running</span>
+<span>train.gravity = 0.4;</span>
+<span>whale.mood = "unbothered";</span>
+<span class="code-hot">heist.window = 12; <em>// you</em></span></code></pre>
+                  <div class="dial-stack">
+                    <label>Tension <input type="range" min="0" max="100" value="62" disabled /></label>
+                    <label>Light <input type="range" min="0" max="100" value="38" disabled /></label>
+                    <label>Scale <input type="range" min="0" max="100" value="81" disabled /></label>
+                    <p>Live controls. No Apply button. The run never restarts.</p>
                   </div>
                 </div>
               </div>
 
-              <div class="studio story-mock" data-mock="reload">
-                <div class="studio-chrome">
-                  <span class="studio-traffic" aria-hidden="true"><i></i><i></i><i></i></span>
-                  <span class="studio-title">Hot-reload</span>
-                  <span class="studio-state" data-swap-state>swap 47/90 · 847ms</span>
+              <div class="chrome story-mock" data-mock="crew">
+                <div class="chrome-bar">
+                  <span class="chrome-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="chrome-title">Collaborators</span>
+                  <span class="chrome-meta">notes returned</span>
                 </div>
-                <div class="studio-grid">
-                  <pre class="code-pane" tabindex="0"><code><span class="code-line">fn tick(world, dt) {</span>
-<span class="code-line">  world.coyote = 80;</span>
-<span class="code-line is-hot" data-hot-line>  world.gravity = 1.15;</span>
-<span class="code-line">  world.jump_buffer = 12;</span>
-<span class="code-line">}</span></code></pre>
-                  <div class="stage stage-compact">
-                    <div class="stage-hud">
-                      <span data-swap-ms>847ms</span>
-                      <span class="score">SCORE 0420</span>
-                    </div>
-                    <div class="stage-moon"></div>
-                    <div class="stage-ledge stage-ledge-a"></div>
-                    <div class="stage-ledge stage-ledge-c"></div>
-                    <img class="stage-actor is-in" src="/brand/trike-mark-white.svg" width="72" height="75" alt="" />
-                    <div class="swap-flash" data-swap-flash hidden>swap · score held</div>
-                  </div>
+                <div class="notes-card">
+                  <p class="notes-kicker">Notes on the last change</p>
+                  <p>The heist is readable. The whale is a setting, not a joke — keep it that way.</p>
+                  <p class="notes-aside">Someone should try to break the window timing on purpose before you ship.</p>
                 </div>
               </div>
 
-              <div class="studio story-mock" data-mock="dials">
-                <div class="studio-chrome">
-                  <span class="studio-traffic" aria-hidden="true"><i></i><i></i><i></i></span>
-                  <span class="studio-title">Dials</span>
-                  <span class="studio-state">scrub-bound · live</span>
+              <div class="chrome story-mock" data-mock="polish">
+                <div class="chrome-bar">
+                  <span class="chrome-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="chrome-title">Feel</span>
+                  <span class="chrome-meta">not done</span>
                 </div>
-                <div class="studio-grid">
-                  <div class="dials-pane">
-                    <label class="dial-row">
-                      <span>Gravity <em data-dial-readout="gravity">1.20</em></span>
-                      <input id="dial-gravity" type="range" min="60" max="180" value="120" />
-                    </label>
-                    <label class="dial-row">
-                      <span>Moon mass <em data-dial-readout="moon">0.80</em></span>
-                      <input id="dial-moon" type="range" min="40" max="140" value="80" />
-                    </label>
-                    <label class="dial-row">
-                      <span>Jump <em data-dial-readout="jump">4.0</em></span>
-                      <input id="dial-jump" type="range" min="20" max="80" value="40" />
-                    </label>
-                    <p class="side-whisper">Continuous properties. No dialog. The world is the form.</p>
-                  </div>
-                  <div class="stage stage-compact" data-dial-stage>
-                    <div class="stage-moon" data-dial-moon></div>
-                    <div class="stage-ledge stage-ledge-a"></div>
-                    <div class="stage-ledge stage-ledge-c"></div>
-                    <img class="stage-actor" data-dial-actor src="/brand/trike-mark-white.svg" width="72" height="75" alt="" />
-                  </div>
-                </div>
+                <ul class="feel-list">
+                  <li class="is-on">jumps that forgive you</li>
+                  <li class="is-on">cameras that look ahead</li>
+                  <li>hits that you can feel</li>
+                  <li class="is-on">sound that drifts, slightly</li>
+                  <li>the thing a stranger notices first</li>
+                </ul>
               </div>
 
-              <div class="studio story-mock" data-mock="agents">
-                <div class="studio-chrome">
-                  <span class="studio-traffic" aria-hidden="true"><i></i><i></i><i></i></span>
-                  <span class="studio-title">Review</span>
-                  <span class="studio-state">Critic · returned</span>
+              <div class="chrome story-mock" data-mock="ship">
+                <div class="chrome-bar chrome-bar-url">
+                  <span class="url-pill">play.ontrike.com/heist-whale</span>
+                  <span class="chrome-meta"><span class="live-dot" aria-hidden="true"></span>live</span>
                 </div>
-                <div class="review-body">
-                  <ol class="pipe">
-                    <li class="is-done">Director</li>
-                    <li class="is-done">Architect</li>
-                    <li class="is-done">Builder</li>
-                    <li class="is-now">Critic</li>
-                    <li>Creative Director</li>
-                  </ol>
-                  <div class="review-card">
-                    <p class="review-meta">Review · dusk-moon · hunk 14</p>
-                    <p>Jump feel is honest. Camera eases late on moon-tilt.</p>
-                    <p class="review-note">Saboteur: spike on frame 12 after a gravity scrub. Skeptic: is the moon a puzzle, or a lamp?</p>
-                  </div>
+                <div class="world-plate world-plate-ship" aria-hidden="true">
+                  <div class="world-sun"></div>
+                  <div class="world-bands"></div>
+                  <img class="world-mark" src="/brand/trike-mark-white.svg" alt="" />
                 </div>
               </div>
             </div>
 
             <div class="story-steps">
-              <article class="story-step is-active" id="door" data-story-step="door">
+              <article class="story-step is-active" id="describe" data-story-step="describe">
                 <p class="idx">01</p>
-                <h3>The Door</h3>
-                <p>
-                  First run is one field: <strong>Describe a game.</strong> Name the
-                  impossible thing. Amber materialises a live preview — not a
-                  moodboard. The running world.
-                </p>
+                <h3>You describe it</h3>
+                <p>One sentence. The impossible thing. What comes back is a running world — not a slideshow of frames.</p>
               </article>
-              <article class="story-step" id="reload" data-story-step="reload">
+              <article class="story-step" id="world" data-story-step="world">
                 <p class="idx">02</p>
-                <h3>Hot-reload that keeps your score</h3>
-                <p>
-                  Edit. See it. Don’t restart. Don’t drop the run. M0 spike:
-                  <strong>P95 1202ms</strong> over 90 swaps, <strong>zero score losses</strong>.
-                </p>
+                <h3>A live world appears</h3>
+                <p>The preview is the game. You can play it while you talk. That is the whole trick.</p>
               </article>
-              <article class="story-step" id="dials" data-story-step="dials">
+              <article class="story-step" id="steer" data-story-step="steer">
                 <p class="idx">03</p>
-                <h3>Dials over dialogs</h3>
-                <p>
-                  Continuous properties live on the running world. Scrub gravity.
-                  The moon moves. Never a dead form field waiting for Apply.
-                </p>
+                <h3>You steer without killing the run</h3>
+                <p>Chat, code, or live controls. Edits show up in the world that’s already going. No restart. No lost place.</p>
               </article>
-              <article class="story-step" id="crew" data-story-step="agents">
+              <article class="story-step" id="crew" data-story-step="crew">
                 <p class="idx">04</p>
-                <h3>A whole studio of agents</h3>
-                <p>
-                  Director → Architect → Builder → Critic → Creative Director.
-                  Then Lapidary, Saboteur, Skeptic. Every change returns a Review.
-                </p>
+                <h3>A crew builds with you</h3>
+                <p>Not one chatbot with a hard hat. Direction, structure, implementation, critique, taste — plus people whose job is to polish, break, and doubt the work.</p>
+              </article>
+              <article class="story-step" id="polish" data-story-step="polish">
+                <p class="idx">05</p>
+                <h3>It has to feel expensive</h3>
+                <p>We’re building for AA feel, not a jam-weekend sprite. If a stranger can tell it was generated, we failed.</p>
+              </article>
+              <article class="story-step" id="ship" data-story-step="ship">
+                <p class="idx">06</p>
+                <h3>You ship a link</h3>
+                <p>Publish to play.ontrike.com. Strangers play first. You keep the git. Remix later.</p>
               </article>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="mark-moment" aria-hidden="true">
-        <div class="wrap mark-moment-inner">
-          <img src="/brand/trike-mark-white.svg" width="352" height="368" alt="" />
-        </div>
-      </section>
-
-      <section class="features-more" aria-labelledby="more-title">
+      <section class="agents-too" id="agents-too" aria-labelledby="agents-too-title">
         <div class="wrap">
           <header class="section-head" data-reveal>
-            <p class="section-kicker">In the bones</p>
-            <h2 id="more-title">
-              <span class="line-bone">Polish has a score.</span>
-              <span class="line-amber">Shipping has a URL.</span>
-            </h2>
-          </header>
-
-          <article class="feature-row" id="ledger" data-reveal>
-            <div class="feature-copy">
-              <p class="idx">05</p>
-              <h3>Obsession Ledger</h3>
-              <p>
-                About a hundred checkable feel details. Coyote time. Hit-stop.
-                Camera look-ahead. The score is visible. Polish is never “done.”
-              </p>
-            </div>
-            <figure class="studio" aria-label="Obsession Ledger">
-              <div class="studio-chrome">
-                <span class="studio-title">Obsession Ledger</span>
-                <span class="studio-state">61 / 100</span>
-              </div>
-              <ul class="ledger">
-                <li class="is-on">coyote time 80ms</li>
-                <li class="is-on">jump buffer 12f</li>
-                <li>landing dust</li>
-                <li class="is-on">camera look-ahead</li>
-                <li>hit-stop on spike</li>
-                <li class="is-on">apex hang 40ms</li>
-                <li>footstep pitch drift</li>
-                <li>moon parallax vs camera</li>
-              </ul>
-            </figure>
-          </article>
-
-          <article class="feature-row is-flip" id="morning" data-reveal>
-            <div class="feature-copy">
-              <p class="idx">06</p>
-              <h3>Morning Report</h3>
-              <p>
-                Overnight, soak plays the game headless. You wake to ranked polish
-                diffs — what drifted, what got worse, what a stranger would feel first.
-              </p>
-            </div>
-            <figure class="studio" aria-label="Morning Report">
-              <div class="studio-chrome">
-                <span class="studio-title">Morning Report</span>
-                <span class="studio-state">soak 7h 12m</span>
-              </div>
-              <ol class="report">
-                <li>
-                  <span>01</span>
-                  <div>
-                    <strong>Jump apex hang is 40ms long</strong>
-                    <p>Ledger item drifted after gravity 1.15</p>
-                  </div>
-                </li>
-                <li>
-                  <span>02</span>
-                  <div>
-                    <strong>Moon parallax fights the camera</strong>
-                    <p>Skeptic flagged this twice. Still open.</p>
-                  </div>
-                </li>
-                <li>
-                  <span>03</span>
-                  <div>
-                    <strong>Spike hitbox 2px generous</strong>
-                    <p>Saboteur found it on frame 12</p>
-                  </div>
-                </li>
-              </ol>
-            </figure>
-          </article>
-
-          <article class="feature-row" id="ship" data-reveal>
-            <div class="feature-copy">
-              <p class="idx">07</p>
-              <h3>Ship to a URL</h3>
-              <p>
-                Publish to <strong>play.ontrike.com</strong>. Strangers play first.
-                You watch the soak. Remix later. The link is the build.
-              </p>
-            </div>
-            <figure class="studio studio-ship" aria-label="Published game on play.ontrike.com">
-              <div class="studio-chrome studio-chrome-url">
-                <span class="url-bar">play.ontrike.com/dusk-moon</span>
-                <span class="studio-state"><span class="live-dot" aria-hidden="true"></span>12 playing</span>
-              </div>
-              <div class="stage stage-ship">
-                <div class="stage-hud">
-                  <span>dusk-moon</span>
-                  <span class="score">SCORE 0420</span>
-                </div>
-                <div class="stage-moon"></div>
-                <div class="stage-ledge stage-ledge-a"></div>
-                <div class="stage-ledge stage-ledge-b"></div>
-                <div class="stage-ledge stage-ledge-c"></div>
-                <img class="stage-actor is-in" src="/brand/trike-mark-white.svg" width="80" height="84" alt="" />
-              </div>
-            </figure>
-          </article>
-
-          <article class="feature-row is-flip" id="git" data-reveal>
-            <div class="feature-copy">
-              <p class="idx">08</p>
-              <h3>Your code stays yours</h3>
-              <p>
-                Git. Export. Agents commit. Human hunks never get clobbered.
-                You can leave. You can come back. The repo is the source of truth.
-              </p>
-            </div>
-            <figure class="studio" aria-label="Git diff with agent and human hunks">
-              <div class="studio-chrome">
-                <span class="studio-title">dusk-moon / physics.rs</span>
-                <span class="studio-state">agent commit · you untouched</span>
-              </div>
-              <pre class="diff-pane" tabindex="0"><code><span class="diff-meta">@@ tick, gravity · Architect</span>
-<span class="diff-add">+ world.gravity = 1.15;</span>
-<span class="diff-ctx">  world.jump_buffer = 12; <em>// you — held</em></span>
-<span class="diff-ctx">  world.coyote = 80; <em>// you — held</em></span>
-<span class="diff-add">+ world.moon_mass = 0.8;</span>
-<span class="diff-meta">hunks owned by you were not rewritten</span></code></pre>
-            </figure>
-          </article>
-        </div>
-      </section>
-
-      <section class="agents" id="agents" aria-labelledby="agents-title">
-        <div class="wrap">
-          <header class="section-head" data-reveal>
-            <p class="section-kicker">The company on the lot</p>
-            <h2 id="agents-title">
-              <span class="line-bone">A whole studio of agents.</span>
-              <span class="line-amber">Every change returns a Review.</span>
+            <p class="section-kicker">Built for agents too</p>
+            <h2 id="agents-too-title">
+              <span class="line-bone">Studio is a client.</span>
+              <span class="line-amber">So is your terminal.</span>
             </h2>
             <p class="section-lede">
-              Not one chatbot with a hard hat. A crew with jobs, taste, and the
-              right to send work back.
+              Cursor, Claude Code, or anything that speaks MCP gets the same
+              powers as the in-product crew: project, build, playtest, art,
+              publish, live controls. Nothing is GUI-only.
             </p>
           </header>
 
-          <ol class="pipe pipe-lg" data-reveal>
-            <li>Director</li>
-            <li>Architect</li>
-            <li>Builder</li>
-            <li>Critic</li>
-            <li>Creative Director</li>
-          </ol>
+          <div class="client-widget" data-reveal>
+            <div class="tablist" role="tablist" aria-label="How to talk to Trike">
+              <button type="button" role="tab" id="tab-cli" aria-controls="panel-cli" aria-selected="true" data-tab="cli">Terminal</button>
+              <button type="button" role="tab" id="tab-mcp" aria-controls="panel-mcp" aria-selected="false" data-tab="mcp">MCP</button>
+              <button type="button" role="tab" id="tab-api" aria-controls="panel-api" aria-selected="false" data-tab="api">API</button>
+              <button type="button" role="tab" id="tab-studio" aria-controls="panel-studio" aria-selected="false" data-tab="studio">Studio</button>
+            </div>
 
-          <ul class="agent-grid">
+            <div class="tab-panels">
+              <div class="tab-panel" role="tabpanel" id="panel-cli" aria-labelledby="tab-cli" data-panel="cli">
+                <div class="snippet-head">
+                  <span>Trike CLI</span>
+                  <button type="button" class="copy-btn" data-copy="cli">Copy</button>
+                </div>
+                <pre class="snippet" tabindex="0"><code data-copy-target="cli">trike new "a heist on a train that is also a whale"
+trike play
+trike probe</code></pre>
+                <p class="snippet-note">New game. Play it. Interrogate it. Same API the editor uses.</p>
+              </div>
+
+              <div class="tab-panel" role="tabpanel" id="panel-mcp" aria-labelledby="tab-mcp" data-panel="mcp" hidden>
+                <div class="snippet-head">
+                  <span>MCP client config</span>
+                  <button type="button" class="copy-btn" data-copy="mcp">Copy</button>
+                </div>
+                <pre class="snippet" tabindex="0"><code data-copy-target="mcp">{
+  "mcpServers": {
+    "trike": {
+      "url": "https://mcp.ontrike.com"
+    }
+  }
+}</code></pre>
+                <p class="snippet-note">Project, build, playtest, assets, publish, live controls — the same suite the studio agents get.</p>
+              </div>
+
+              <div class="tab-panel" role="tabpanel" id="panel-api" aria-labelledby="tab-api" data-panel="api" hidden>
+                <div class="snippet-head">
+                  <span>REST + SDK</span>
+                  <button type="button" class="copy-btn" data-copy="api">Copy</button>
+                </div>
+                <pre class="snippet" tabindex="0"><code data-copy-target="api">POST /v1/games
+POST /v1/games/{id}/play
+POST /v1/games/{id}/publish
+
+# embed the player
+&lt;iframe src="https://play.ontrike.com/{id}"&gt;</code></pre>
+                <p class="snippet-note">HTTP, an SDK, and an embed. If you can call an API, you can ship a game.</p>
+              </div>
+
+              <div class="tab-panel" role="tabpanel" id="panel-studio" aria-labelledby="tab-studio" data-panel="studio" hidden>
+                <div class="snippet-head">
+                  <span>Trike Studio</span>
+                </div>
+                <pre class="snippet" tabindex="0"><code>The editor is one client on the same API.
+Describe. Inspect. Break. Fix.
+Then open the same project from a terminal
+and keep going.</code></pre>
+                <p class="snippet-note">GUI is a view, not a gate. Under construction — that’s why the waitlist exists.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="ambition" aria-labelledby="ambition-title">
+        <div class="wrap ambition-grid">
+          <div data-reveal>
+            <p class="section-kicker">The bar</p>
+            <h2 id="ambition-title">
+              <span class="line-bone">If it looks generated,</span>
+              <span class="line-amber">we failed.</span>
+            </h2>
+            <p class="section-lede">
+              We’re not shipping a toy that demos well in a GIF. The point is
+              games that feel directed — the kind you’d actually send to a
+              friend. Deterministic replays. Edits that don’t blow up the run.
+              Taste with a veto.
+            </p>
+          </div>
+          <ul class="ambition-points">
             <li data-reveal>
-              <h3>Director</h3>
-              <p>Sets the shot. What the game is trying to be, in one breath.</p>
+              <strong>Sentence → running game</strong>
+              <p>The preview is playable. That is the product, not a trailer.</p>
             </li>
             <li data-reveal>
-              <h3>Architect</h3>
-              <p>Structure, systems, the bones. Makes the impossible thing stand.</p>
+              <strong>The run survives the edit</strong>
+              <p>Ninety live swaps on an early spike. Place in the world held. About a second, worst case.</p>
             </li>
             <li data-reveal>
-              <h3>Builder</h3>
-              <p>Implements. Touches the running world. Leaves a hunk you can read.</p>
+              <strong>A crew, not a chatbot</strong>
+              <p>Jobs, taste, and the right to send work back. Your tools get those jobs too.</p>
             </li>
             <li data-reveal>
-              <h3>Critic</h3>
-              <p>Every change returns a Review. Nothing ships on vibes alone.</p>
-            </li>
-            <li data-reveal>
-              <h3>Creative Director</h3>
-              <p>Taste. Cuts the clever thing that doesn’t feel.</p>
-            </li>
-            <li data-reveal>
-              <h3>Lapidary</h3>
-              <p>Polish. Facets, not features. Lives in the Obsession Ledger.</p>
-            </li>
-            <li data-reveal>
-              <h3>Saboteur</h3>
-              <p>Breaks it on purpose so you don’t ship the break.</p>
-            </li>
-            <li data-reveal>
-              <h3>Skeptic</h3>
-              <p>Asks the rude question. Usually the right one.</p>
+              <strong>The git is yours</strong>
+              <p>Export. Commit. Leave. Come back. Agents don’t clobber the lines you wrote.</p>
             </li>
           </ul>
         </div>
@@ -600,13 +390,10 @@
           </p>
           <div class="status-copy">
             <h2 id="status-title">
-              <span class="line-bone">Studio is under construction.</span>
-              <span class="line-amber">You’re on the lot early. That’s the point.</span>
+              <span class="line-bone">The studio is still being built.</span>
+              <span class="line-amber">You’re early on purpose.</span>
             </h2>
-            <p>
-              The editor is taking shape — The Door, the dials, the crew, the
-              ledger. Waitlist now. Early access when the preview is yours to break.
-            </p>
+            <p>Waitlist now. Early access when the world is yours to break.</p>
           </div>
         </div>
       </section>
@@ -616,12 +403,12 @@
           <div class="waitlist-copy" data-reveal>
             <p class="section-kicker">Early access</p>
             <h2 id="waitlist-title">
-              <span class="line-bone">Get in before</span>
-              <span class="line-amber">The Door opens.</span>
+              <span class="line-ink">Get in before</span>
+              <span class="line-coral">the first worlds ship.</span>
             </h2>
             <p class="lede">
-              We’ll write when Studio is ready to try. No drip. No circle of
-              founders. Just the note that it runs.
+              We’ll write when it’s ready to try. No drip. No circle of founders.
+              Just the note that it runs.
             </p>
           </div>
 
@@ -660,7 +447,7 @@
             </form>
             <div class="waitlist-success" data-waitlist-success hidden tabindex="-1">
               <p class="success-kicker">You’re on the list</p>
-              <p>We’ll write when Studio is ready to try. Until then — describe games in the shower. That’s research.</p>
+              <p>We’ll write when it’s ready to try. Until then — keep naming impossible games.</p>
             </div>
           </div>
         </div>

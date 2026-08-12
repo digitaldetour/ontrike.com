@@ -1,8 +1,8 @@
 # ontrike.com
 
-Public marketing site for **Trike** — an AI-native game IDE.
+Public marketing site for **Trike** — an AI-native game studio in a box.
 
-Describe a game, watch it materialise in a live running preview, iterate in conversation or in code, ship it to a URL.
+Describe a game. A live world appears. Steer it in chat or in code. Ship a link strangers can play. Studio, CLI, and MCP share one API.
 
 - Product: **Trike**
 - Engine: **Amber**

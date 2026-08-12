@@ -13,22 +13,21 @@
         overflow: hidden;
         position: relative;
       }
-      .glow {
+      .sky {
         position: absolute;
-        right: -80px;
-        top: -40px;
-        width: 720px;
-        height: 720px;
-        border-radius: 50%;
-        background: radial-gradient(circle, rgba(245,165,36,0.16), transparent 62%);
+        inset: 0;
+        background:
+          radial-gradient(ellipse at 72% 20%, rgba(245,165,36,0.32), transparent 42%),
+          radial-gradient(ellipse at 18% 80%, rgba(47,155,138,0.24), transparent 50%),
+          #131212;
       }
       img.mark {
         position: absolute;
-        right: 40px;
-        top: 40px;
-        width: 520px;
-        opacity: 0.16;
-        filter: drop-shadow(0 0 80px rgba(245,165,36,0.2));
+        right: 48px;
+        top: 70px;
+        width: 420px;
+        opacity: 0.88;
+        filter: drop-shadow(0 0 80px rgba(245,165,36,0.25));
       }
       .copy {
         position: absolute;
@@ -45,14 +44,18 @@
         margin-bottom: 22px;
       }
       h1 {
-        font-size: 92px;
+        font-size: 84px;
         font-weight: 400;
         line-height: 0.92;
         letter-spacing: -0.035em;
         margin: 0;
       }
+      em {
+        color: #f5a524;
+        font-style: italic;
+      }
       p {
-        font-family: Inter, system-ui, sans-serif;
+        font-family: system-ui, sans-serif;
         font-size: 24px;
         color: #a8a399;
         margin-top: 28px;
@@ -62,12 +65,12 @@
     </style>
   </head>
   <body>
-    <div class="glow"></div>
+    <div class="sky"></div>
     <img class="mark" src="../public/brand/trike-mark-white.svg" alt="" />
     <div class="copy">
       <div class="kicker">Trike</div>
-      <h1>Describe a game.<br />Watch it run.</h1>
-      <p>An AI-native game IDE. Live preview. Ship to a URL.</p>
+      <h1>Describe a game.<br />It actually <em>runs</em>.</h1>
+      <p>An AI-native game studio in a box. Ship a link.</p>
     </div>
   </body>
 </html>
