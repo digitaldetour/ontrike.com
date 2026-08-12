@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="dark" />
     <meta name="theme-color" content="#131212" />
-    <title>Trike — Describe a game. Watch it run.</title>
+    <title>Trike — Describe a game. Watch it materialise.</title>
     <meta
       name="description"
       content="Trike is an AI-native game IDE. Describe a game, watch it materialise in a live running preview, iterate in conversation or in code, and ship it to a URL."
@@ -14,7 +14,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Trike" />
     <meta property="og:url" content="https://ontrike.com/" />
-    <meta property="og:title" content="Trike — Describe a game. Watch it run." />
+    <meta property="og:title" content="Trike — Describe a game. Watch it materialise." />
     <meta
       property="og:description"
       content="An AI-native game IDE. Describe a game, watch a live preview start, iterate in conversation or in code, ship it to a URL."
@@ -23,7 +23,7 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Trike — Describe a game. Watch it run." />
+    <meta name="twitter:title" content="Trike — Describe a game. Watch it materialise." />
     <meta
       name="twitter:description"
       content="An AI-native game IDE. Describe a game, watch a live preview start, iterate in conversation or in code, ship it to a URL."
@@ -79,50 +79,18 @@
               <span class="live-dot" aria-hidden="true"></span>
               AI-native game IDE · Studio in construction
             </p>
-            <h1 id="hero-title">Describe a game.<br />Watch it run.</h1>
+            <h1 id="hero-title">
+              Describe a game.<br />
+              Watch it <em class="hero-break">materialise</em>.
+            </h1>
             <p class="lede">
-              First run is The Door: name the impossible thing. A live preview
-              materialises. Iterate in the conversation or in the file. Publish
-              to a URL. Strangers play first.
+              First run is one field. Name the impossible thing. A live preview
+              starts. Iterate in the conversation or in the file. Ship a URL.
+              Strangers play first.
             </p>
-
-            <div class="waitlist-panel waitlist-panel-hero">
-              <form
-                class="waitlist-form"
-                data-waitlist-form
-                action="/api/waitlist"
-                method="post"
-                novalidate
-              >
-                <div class="hp" aria-hidden="true">
-                  <label for="website-hero">Website</label>
-                  <input id="website-hero" name="website" type="text" tabindex="-1" autocomplete="off" />
-                </div>
-                <label class="field-label" for="email-hero">Email</label>
-                <div class="field-row">
-                  <input
-                    id="email-hero"
-                    name="email"
-                    type="email"
-                    inputmode="email"
-                    autocomplete="email"
-                    required
-                    maxlength="254"
-                    placeholder="you@studio.dev"
-                    spellcheck="false"
-                    aria-describedby="waitlist-hint-hero"
-                  />
-                  <button class="btn btn-primary" type="submit">Get early access</button>
-                </div>
-                <p class="field-hint" id="waitlist-hint-hero" data-waitlist-hint>
-                  Backstage pass while Studio is being built. No drip.
-                </p>
-                <p class="field-error" id="waitlist-error-hero" data-waitlist-error role="alert" hidden></p>
-              </form>
-              <div class="waitlist-success" data-waitlist-success hidden tabindex="-1">
-                <p class="success-kicker">You’re on the list</p>
-                <p>We’ll write when Studio is ready to try. Until then — keep naming impossible games.</p>
-              </div>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#waitlist">Get early access</a>
+              <a class="btn btn-ghost" href="#loop">See the Door</a>
             </div>
           </div>
 
@@ -166,28 +134,108 @@
         </div>
       </section>
 
-      <section class="proof" aria-label="Measured results">
-        <div class="wrap proof-grid">
-          <article>
-            <p class="proof-value">1202<span>ms</span></p>
-            <p class="proof-label">P95 edit → visible</p>
-            <p class="proof-note">M0 spike · 90 swaps</p>
-          </article>
-          <article>
-            <p class="proof-value">0</p>
-            <p class="proof-label">Score losses</p>
-            <p class="proof-note">Hot-reload kept the run</p>
-          </article>
-          <article>
-            <p class="proof-value">1222</p>
-            <p class="proof-label">Tests green</p>
-            <p class="proof-note">The suite that gates a swap</p>
-          </article>
-          <article>
-            <p class="proof-value">1:1</p>
-            <p class="proof-label">Deterministic replays</p>
-            <p class="proof-note">Same input. Same world.</p>
-          </article>
+      <section class="sentence-band" aria-labelledby="sentence-title">
+        <div class="wrap">
+          <header class="section-head" data-reveal>
+            <p class="section-kicker">What it is</p>
+            <h2 id="sentence-title">
+              <span class="line-bone">One editor.</span>
+              <span class="line-amber">The whole loop.</span>
+            </h2>
+          </header>
+          <p class="sentence" data-reveal>
+            Trike is
+            <a href="#door">The Door</a>,
+            <a href="#reload">hot-reload that keeps your score</a>,
+            <a href="#dials">dials on the running world</a>,
+            <a href="#agents">a studio of agents</a>,
+            an <a href="#ledger">Obsession Ledger</a>,
+            a <a href="#morning">Morning Report</a>,
+            a URL on <a href="#ship">play.ontrike.com</a>,
+            and <a href="#git">git that stays yours</a>.
+            Not a chatbot with a hard hat. A lot, on purpose.
+          </p>
+        </div>
+      </section>
+
+      <section class="proof" id="proof" aria-labelledby="proof-title">
+        <div class="wrap">
+          <header class="section-head" data-reveal>
+            <p class="section-kicker">M0 spike</p>
+            <h2 id="proof-title">
+              <span class="line-bone">Hot-reload that keeps your score.</span>
+              <span class="line-amber">We measured it because we didn’t believe it.</span>
+            </h2>
+            <p class="section-lede">
+              Scrub gravity. The world updates. The score does not. Ninety swaps
+              on M0, P95 1202ms, zero losses — not bad, for a reload.
+            </p>
+          </header>
+
+          <figure class="studio proof-widget" aria-label="Interactive hot-reload demo">
+            <div class="studio-chrome">
+              <span class="studio-traffic" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="studio-title">dusk-moon · live</span>
+              <span class="studio-state" data-proof-state>swap 0 · idle</span>
+            </div>
+            <div class="studio-grid">
+              <div class="dials-pane">
+                <label class="dial-row">
+                  <span>Gravity <em data-proof-g>1.20</em></span>
+                  <input id="proof-gravity" type="range" min="60" max="180" value="120" />
+                </label>
+                <p class="side-whisper">
+                  This is the edit. The stage is the game. Score is locked at 0420
+                  because that’s the whole point.
+                </p>
+                <p class="proof-live">
+                  Last swap <strong data-proof-ms>—</strong>
+                  · score held
+                </p>
+              </div>
+              <div class="stage stage-compact" data-proof-stage>
+                <div class="stage-hud">
+                  <span data-proof-hud-g>g 1.20</span>
+                  <span class="score" data-proof-score>SCORE 0420</span>
+                </div>
+                <div class="stage-moon" data-proof-moon></div>
+                <div class="stage-ledge stage-ledge-a"></div>
+                <div class="stage-ledge stage-ledge-c"></div>
+                <img
+                  class="stage-actor is-in"
+                  data-proof-actor
+                  src="/brand/trike-mark-white.svg"
+                  width="72"
+                  height="75"
+                  alt=""
+                />
+                <div class="swap-flash" data-proof-flash hidden>swap · score held</div>
+              </div>
+            </div>
+          </figure>
+
+          <ul class="proof-grid">
+            <li>
+              <p class="proof-value">1202<span>ms</span></p>
+              <p class="proof-label">P95 edit → visible</p>
+              <p class="proof-note">90 swaps</p>
+            </li>
+            <li>
+              <p class="proof-value">0</p>
+              <p class="proof-label">Score losses</p>
+              <p class="proof-note">The run stayed the run</p>
+            </li>
+            <li>
+              <p class="proof-value">1222</p>
+              <p class="proof-label">Tests green</p>
+              <p class="proof-note">The suite that gates a swap</p>
+            </li>
+            <li>
+              <p class="proof-value">1:1</p>
+              <p class="proof-label">Deterministic replays</p>
+              <p class="proof-note">Same input. Same world.</p>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -195,10 +243,13 @@
         <div class="wrap">
           <header class="section-head" data-reveal>
             <p class="section-kicker">The loop</p>
-            <h2 id="loop-title">Studio is a running world, not a form you submit.</h2>
+            <h2 id="loop-title">
+              <span class="line-bone">Studio is a running world.</span>
+              <span class="line-amber">Not a form you submit.</span>
+            </h2>
             <p class="section-lede">
-              Scroll the loop. The preview on the right is the product — fake chrome,
-              real shape. Amber runs it while you work.
+              Scroll the list. The preview on the right is the product — fake
+              chrome, real shape. Amber runs it while you work.
             </p>
           </header>
 
@@ -222,7 +273,7 @@
                     <div class="stage-moon"></div>
                     <div class="stage-ledge stage-ledge-a"></div>
                     <div class="stage-ledge stage-ledge-c"></div>
-                    <img class="stage-actor" src="/brand/trike-mark-white.svg" width="72" height="75" alt="" />
+                    <img class="stage-actor is-in" src="/brand/trike-mark-white.svg" width="72" height="75" alt="" />
                   </div>
                 </div>
               </div>
@@ -308,7 +359,7 @@
             </div>
 
             <div class="story-steps">
-              <article class="story-step is-active" data-story-step="door">
+              <article class="story-step is-active" id="door" data-story-step="door">
                 <p class="idx">01</p>
                 <h3>The Door</h3>
                 <p>
@@ -317,7 +368,7 @@
                   moodboard. The running world.
                 </p>
               </article>
-              <article class="story-step" data-story-step="reload">
+              <article class="story-step" id="reload" data-story-step="reload">
                 <p class="idx">02</p>
                 <h3>Hot-reload that keeps your score</h3>
                 <p>
@@ -325,7 +376,7 @@
                   <strong>P95 1202ms</strong> over 90 swaps, <strong>zero score losses</strong>.
                 </p>
               </article>
-              <article class="story-step" data-story-step="dials">
+              <article class="story-step" id="dials" data-story-step="dials">
                 <p class="idx">03</p>
                 <h3>Dials over dialogs</h3>
                 <p>
@@ -333,7 +384,7 @@
                   The moon moves. Never a dead form field waiting for Apply.
                 </p>
               </article>
-              <article class="story-step" data-story-step="agents">
+              <article class="story-step" id="crew" data-story-step="agents">
                 <p class="idx">04</p>
                 <h3>A whole studio of agents</h3>
                 <p>
@@ -346,14 +397,23 @@
         </div>
       </section>
 
+      <section class="mark-moment" aria-hidden="true">
+        <div class="wrap mark-moment-inner">
+          <img src="/brand/trike-mark-white.svg" width="352" height="368" alt="" />
+        </div>
+      </section>
+
       <section class="features-more" aria-labelledby="more-title">
         <div class="wrap">
           <header class="section-head" data-reveal>
             <p class="section-kicker">In the bones</p>
-            <h2 id="more-title">Polish has a score. Shipping has a URL. Your git stays yours.</h2>
+            <h2 id="more-title">
+              <span class="line-bone">Polish has a score.</span>
+              <span class="line-amber">Shipping has a URL.</span>
+            </h2>
           </header>
 
-          <article class="feature-row" data-reveal>
+          <article class="feature-row" id="ledger" data-reveal>
             <div class="feature-copy">
               <p class="idx">05</p>
               <h3>Obsession Ledger</h3>
@@ -380,7 +440,7 @@
             </figure>
           </article>
 
-          <article class="feature-row is-flip" data-reveal>
+          <article class="feature-row is-flip" id="morning" data-reveal>
             <div class="feature-copy">
               <p class="idx">06</p>
               <h3>Morning Report</h3>
@@ -420,7 +480,7 @@
             </figure>
           </article>
 
-          <article class="feature-row" data-reveal>
+          <article class="feature-row" id="ship" data-reveal>
             <div class="feature-copy">
               <p class="idx">07</p>
               <h3>Ship to a URL</h3>
@@ -448,7 +508,7 @@
             </figure>
           </article>
 
-          <article class="feature-row is-flip" data-reveal>
+          <article class="feature-row is-flip" id="git" data-reveal>
             <div class="feature-copy">
               <p class="idx">08</p>
               <h3>Your code stays yours</h3>
@@ -477,7 +537,10 @@
         <div class="wrap">
           <header class="section-head" data-reveal>
             <p class="section-kicker">The company on the lot</p>
-            <h2 id="agents-title">A studio of agents. Every change returns a Review.</h2>
+            <h2 id="agents-title">
+              <span class="line-bone">A whole studio of agents.</span>
+              <span class="line-amber">Every change returns a Review.</span>
+            </h2>
             <p class="section-lede">
               Not one chatbot with a hard hat. A crew with jobs, taste, and the
               right to send work back.
@@ -536,7 +599,10 @@
             Building in public
           </p>
           <div class="status-copy">
-            <h2 id="status-title">Studio is under construction. This is the backstage pass.</h2>
+            <h2 id="status-title">
+              <span class="line-bone">Studio is under construction.</span>
+              <span class="line-amber">You’re on the lot early. That’s the point.</span>
+            </h2>
             <p>
               The editor is taking shape — The Door, the dials, the crew, the
               ledger. Waitlist now. Early access when the preview is yours to break.
@@ -549,10 +615,13 @@
         <div class="wrap waitlist-grid">
           <div class="waitlist-copy" data-reveal>
             <p class="section-kicker">Early access</p>
-            <h2 id="waitlist-title">Get in before The Door opens.</h2>
+            <h2 id="waitlist-title">
+              <span class="line-bone">Get in before</span>
+              <span class="line-amber">The Door opens.</span>
+            </h2>
             <p class="lede">
-              We’ll write when Studio is ready to try. No drip. No noise. Just
-              the note that it runs.
+              We’ll write when Studio is ready to try. No drip. No circle of
+              founders. Just the note that it runs.
             </p>
           </div>
 

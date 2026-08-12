@@ -77,6 +77,62 @@ function initReveal(): void {
   nodes.forEach((node) => io.observe(node));
 }
 
+function initProof(): void {
+  const dial = document.querySelector<HTMLInputElement>("#proof-gravity");
+  const gRead = document.querySelector("[data-proof-g]");
+  const hudG = document.querySelector("[data-proof-hud-g]");
+  const ms = document.querySelector("[data-proof-ms]");
+  const state = document.querySelector("[data-proof-state]");
+  const score = document.querySelector("[data-proof-score]");
+  const moon = document.querySelector<HTMLElement>("[data-proof-moon]");
+  const actor = document.querySelector<HTMLElement>("[data-proof-actor]");
+  const flash = document.querySelector<HTMLElement>("[data-proof-flash]");
+  if (!dial || !gRead || !hudG || !ms || !state || !score) return;
+
+  let swaps = 0;
+  const SCORE = "SCORE 0420";
+
+  const paint = () => {
+    const g = Number(dial.value) / 100;
+    gRead.textContent = g.toFixed(2);
+    hudG.textContent = `g ${g.toFixed(2)}`;
+    score.textContent = SCORE;
+    if (moon) {
+      const size = 2.4 + (g - 0.6) * 1.1;
+      moon.style.width = `${size}rem`;
+      moon.style.height = `${size}rem`;
+    }
+    if (actor) {
+      actor.style.animationDuration = `${Math.max(1.3, 2.6 / g)}s`;
+    }
+  };
+
+  const swap = () => {
+    swaps += 1;
+    const duration = 640 + ((swaps * 37) % 562);
+    ms.textContent = `${duration}ms`;
+    state.textContent = `swap ${swaps} · ${duration}ms`;
+    score.textContent = SCORE;
+    if (flash) {
+      flash.hidden = false;
+      window.setTimeout(() => {
+        flash.hidden = true;
+      }, 380);
+    }
+    paint();
+  };
+
+  dial.addEventListener("input", () => {
+    if (prefersReducedMotion()) {
+      paint();
+      score.textContent = SCORE;
+      return;
+    }
+    swap();
+  });
+  paint();
+}
+
 function initStory(): void {
   const steps = document.querySelectorAll<HTMLElement>("[data-story-step]");
   const stage = document.querySelector<HTMLElement>("[data-story-stage]");
@@ -87,6 +143,16 @@ function initStory(): void {
     stage.dataset.active = id;
     steps.forEach((node) => node.classList.toggle("is-active", node === step));
   };
+
+  const fromHash = () => {
+    const hash = window.location.hash.slice(1);
+    if (!hash) return;
+    const match = document.querySelector<HTMLElement>(`[data-story-step="${hash}"], #${CSS.escape(hash)}[data-story-step]`);
+    if (match) activate(match);
+  };
+
+  fromHash();
+  window.addEventListener("hashchange", fromHash);
 
   const io = new IntersectionObserver(
     (entries) => {
@@ -183,6 +249,7 @@ function initWaitlists(): void {
 initNav();
 initPrompt();
 initReveal();
+initProof();
 initStory();
 initDials();
 initHotReload();
