@@ -1,0 +1,21 @@
+{
+  "name": "ontrike.com",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Marketing site for Trike — ontrike.com",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "pages:dev": "npm run build && wrangler pages dev dist"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2",
+    "vite": "^7.1.3",
+    "wrangler": "^4.28.0"
+  },
+  "engines": {
+    "node": ">=20.19"
+  }
+}

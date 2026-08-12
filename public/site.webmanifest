@@ -1,0 +1,21 @@
+{
+  "name": "Trike",
+  "short_name": "Trike",
+  "description": "An AI-native game IDE. Describe a game, watch it run, ship it to a URL.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#131212",
+  "theme_color": "#131212",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    }
+  ]
+}
