@@ -70,13 +70,23 @@
               <div class="w-sky"></div>
               <div class="w-moon"></div>
               <div class="w-sea"></div>
-              <div class="w-body">
-                <span class="w-stripe"></span>
-                <span class="w-stripe w-stripe-2"></span>
-                <span class="w-eye"></span>
-                <span class="w-fin"></span>
-                <span class="w-spout"></span>
-              </div>
+              <svg class="w-svg" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+                <defs>
+                  <linearGradient id="whaleFill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#3bb5a2" />
+                    <stop offset="55%" stop-color="#1d5c54" />
+                    <stop offset="100%" stop-color="#123833" />
+                  </linearGradient>
+                </defs>
+                <path class="w-fluke" d="M1020 210 C1088 96 1192 78 1194 148 C1196 206 1128 248 1062 268 C1124 292 1190 348 1148 402 C1092 368 1036 330 992 292 Z" />
+                <path class="w-shape" d="M86 292 C74 214 168 132 292 128 C412 124 560 148 720 168 C846 184 948 198 1028 236 C1088 262 1124 292 1096 328 C1064 368 980 392 860 408 C700 428 520 438 360 418 C232 402 128 372 96 338 C78 318 80 304 86 292 Z" />
+                <path class="w-belly" d="M210 338 C320 368 520 392 760 378 C900 370 1008 348 1052 322 C1004 356 880 392 700 404 C500 418 320 402 210 338 Z" />
+                <path class="w-jaw" d="M96 300 C88 276 108 250 148 246 C128 268 118 292 128 318 C112 316 100 310 96 300 Z" />
+                <ellipse class="w-fin-svg" cx="430" cy="400" rx="92" ry="28" transform="rotate(-18 430 400)" />
+                <circle class="w-eye-svg" cx="214" cy="248" r="16" />
+                <circle class="w-pupil" cx="218" cy="250" r="7" />
+                <path class="w-spout-svg" d="M268 128 C272 72 248 36 268 18 C292 48 286 88 292 128" />
+              </svg>
               <div class="w-train">
                 <span class="w-car w-engine"></span>
                 <span class="w-car"></span>
@@ -91,7 +101,7 @@
               <div class="k-wall"></div>
               <div class="k-tile"></div>
               <div class="k-counter"></div>
-              <div class="k-banner">LOCAL 12</div>
+              <div class="k-banner">ON STRIKE</div>
               <div class="k-knives">
                 <span></span><span></span><span></span><span></span><span></span>
               </div>
@@ -237,10 +247,13 @@
                   <span class="chrome-meta"><span class="live-dot" aria-hidden="true"></span>running</span>
                 </div>
                 <div class="mini-biome mini-whale" aria-hidden="true">
-                  <div class="w-body">
-                    <span class="w-eye"></span>
-                    <span class="w-fin"></span>
-                  </div>
+                  <svg class="w-svg" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMax meet">
+                    <path class="w-fluke" d="M1020 210 C1088 96 1192 78 1194 148 C1196 206 1128 248 1062 268 C1124 292 1190 348 1148 402 C1092 368 1036 330 992 292 Z" />
+                    <path class="w-shape" d="M86 292 C74 214 168 132 292 128 C412 124 560 148 720 168 C846 184 948 198 1028 236 C1088 262 1124 292 1096 328 C1064 368 980 392 860 408 C700 428 520 438 360 418 C232 402 128 372 96 338 C78 318 80 304 86 292 Z" />
+                    <path class="w-belly" d="M210 338 C320 368 520 392 760 378 C900 370 1008 348 1052 322 C1004 356 880 392 700 404 C500 418 320 402 210 338 Z" />
+                    <circle class="w-eye-svg" cx="214" cy="248" r="16" />
+                    <circle class="w-pupil" cx="218" cy="250" r="7" />
+                  </svg>
                   <div class="w-train">
                     <span class="w-car w-engine"></span>
                     <span class="w-car"></span>

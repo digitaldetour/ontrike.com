@@ -58,9 +58,14 @@ function initWorlds(): void {
     });
   });
 
-  show(root.dataset.world ?? "whale");
+  const requested = new URLSearchParams(window.location.search).get("world");
+  const start =
+    requested && (WORLDS as readonly string[]).includes(requested)
+      ? requested
+      : (root.dataset.world ?? "whale");
+  show(start);
 
-  if (!prefersReducedMotion()) {
+  if (!prefersReducedMotion() && !requested) {
     timer = window.setInterval(() => {
       index = (index + 1) % WORLDS.length;
       show(WORLDS[index]);
