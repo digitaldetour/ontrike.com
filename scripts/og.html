@@ -7,82 +7,57 @@
       body {
         width: 1200px;
         height: 630px;
-        background: #061412;
+        background: #131212;
         color: #f2efe9;
         font-family: Georgia, "Palatino Linotype", Palatino, serif;
         overflow: hidden;
         position: relative;
       }
-      .sky {
+      .glow {
         position: absolute;
-        inset: 0;
-        background:
-          radial-gradient(ellipse at 78% 10%, rgba(244,211,94,0.62), transparent 30%),
-          radial-gradient(ellipse at 18% 28%, rgba(47,155,138,0.42), transparent 38%),
-          linear-gradient(180deg, #1a4a44 0%, #0c2623 46%, #061412 100%);
+        right: 80px;
+        top: 90px;
+        width: 420px;
+        height: 420px;
+        background: radial-gradient(ellipse at 50% 45%, rgba(245,165,36,0.28), transparent 62%);
       }
-      .moon {
+      .frame {
         position: absolute;
-        top: 48px;
-        right: 90px;
-        width: 160px;
-        height: 160px;
-        border-radius: 50%;
-        background: radial-gradient(circle at 36% 34%, #fff6c8, #f4d35e 48%, #f5a524 72%);
-        box-shadow: 0 0 120px rgba(245,165,36,0.58);
+        right: 72px;
+        top: 118px;
+        width: 420px;
+        height: 390px;
+        border: 1px solid rgba(210,180,136,0.28);
+        border-bottom: 0;
+        box-shadow: inset 0 0 0 12px #0e0d0d;
       }
-      .whale {
+      img.stamp {
         position: absolute;
-        left: 40px;
-        bottom: 70px;
-        width: 1120px;
-        height: 280px;
-        background: linear-gradient(180deg, #3bb5a2 0%, #1d5c54 36%, #123833 60%, #e85d4c 100%);
-        border-radius: 50% 48% 42% 46% / 72% 64% 36% 40%;
-        box-shadow: inset 0 -40px 50px rgba(232,93,76,0.5);
-      }
-      .train {
-        position: absolute;
-        left: 340px;
-        bottom: 300px;
-        display: flex;
-        gap: 6px;
-        transform: rotate(-5deg);
-      }
-      .car {
-        width: 70px;
-        height: 38px;
-        background: #161412;
-        border-radius: 6px;
-        box-shadow: inset 0 10px 0 -6px #f4d35e;
-      }
-      .stamp {
-        position: absolute;
-        right: 48px;
-        bottom: 40px;
-        width: 56px;
+        right: 56px;
+        bottom: 48px;
+        width: 36px;
+        opacity: 0.9;
       }
       .copy {
         position: absolute;
-        left: 64px;
-        top: 88px;
-        max-width: 720px;
+        left: 72px;
+        top: 168px;
+        max-width: 620px;
       }
       .kicker {
         font-family: ui-monospace, Menlo, monospace;
-        font-size: 16px;
+        font-size: 15px;
         letter-spacing: 0.16em;
         text-transform: uppercase;
-        color: #f4d35e;
-        margin-bottom: 18px;
+        color: #a8a399;
+        margin-bottom: 22px;
       }
       h1 {
-        font-size: 78px;
+        font-size: 72px;
         font-weight: 400;
-        line-height: 0.9;
+        line-height: 0.94;
         letter-spacing: -0.04em;
         margin: 0;
-        text-shadow: 0 8px 40px rgba(8,9,10,0.55);
       }
       em {
         color: #f5a524;
@@ -91,18 +66,11 @@
     </style>
   </head>
   <body>
-    <div class="sky"></div>
-    <div class="moon"></div>
-    <div class="whale"></div>
-    <div class="train">
-      <div class="car"></div>
-      <div class="car"></div>
-      <div class="car"></div>
-      <div class="car"></div>
-    </div>
+    <div class="glow"></div>
+    <div class="frame"></div>
     <img class="stamp" src="../public/brand/trike-mark-white.svg" alt="" />
     <div class="copy">
-      <div class="kicker">Trike · a live world</div>
+      <div class="kicker">Trike</div>
       <h1>Describe a game.<br />It actually <em>runs</em>.</h1>
     </div>
   </body>

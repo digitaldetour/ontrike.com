@@ -8,7 +8,7 @@
     <title>Trike — Describe a game. It actually runs.</title>
     <meta
       name="description"
-      content="Trike is an AI-native game studio in a box. Describe a game, watch a live world appear, steer it in chat or code, and ship a link strangers can play. MCP, CLI, and Studio share one API."
+      content="Trike is a game studio that fits in a sentence. Describe a world, get something you can play, then ship a link. Studio, CLI, MCP, and API — same powers."
     />
     <link rel="canonical" href="https://ontrike.com/" />
     <meta property="og:type" content="website" />
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Trike — Describe a game. It actually runs." />
     <meta
       property="og:description"
-      content="An AI-native game studio in a box. Describe a game. A live world appears. Ship a link. Your tools can build games too."
+      content="Not a moodboard. A live world, a crew of AI collaborators, and a link strangers can play."
     />
     <meta property="og:image" content="https://ontrike.com/og.png" />
     <meta property="og:image:width" content="1200" />
@@ -26,7 +26,7 @@
     <meta name="twitter:title" content="Trike — Describe a game. It actually runs." />
     <meta
       name="twitter:description"
-      content="An AI-native game studio in a box. Describe a game. A live world appears. Ship a link. Your tools can build games too."
+      content="Not a moodboard. A live world, a crew of AI collaborators, and a link strangers can play."
     />
     <meta name="twitter:image" content="https://ontrike.com/og.png" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -40,7 +40,7 @@
         "applicationCategory": "GameApplication",
         "operatingSystem": "Web",
         "url": "https://ontrike.com/",
-        "description": "Trike is an AI-native game studio in a box. Describe a game, watch a live world appear, and ship a link strangers can play."
+        "description": "Trike is a game studio that fits in a sentence. Describe a game, watch a live world appear, and ship a link strangers can play."
       }
     </script>
   </head>
@@ -51,12 +51,12 @@
     <header class="site-header" id="site-header">
       <div class="wrap header-inner">
         <a class="brand" href="/" aria-label="Trike home">
-          <img class="brand-mark" src="/brand/trike-mark-white.svg" width="36" height="38" alt="" />
+          <img class="brand-mark" src="/brand/trike-mark-white.svg" width="28" height="29" alt="" />
           <span class="brand-word">Trike</span>
         </a>
         <nav class="header-nav" aria-label="Page">
           <a href="#how">How it works</a>
-          <a href="#agents-too">For agents</a>
+          <a href="#agents-too">Studio, CLI, MCP</a>
         </nav>
         <a class="btn btn-primary btn-compact" href="#waitlist">Get early access</a>
       </div>
@@ -64,153 +64,74 @@
 
     <main id="main">
       <section class="hero" aria-labelledby="hero-title">
-        <div class="poster" data-world="whale" data-worlds aria-label="A live world that changes with each sentence">
-          <div class="poster-stage" aria-hidden="true">
-            <div class="biome biome-whale is-on">
-              <div class="w-sky"></div>
-              <div class="w-moon"></div>
-              <div class="w-sea"></div>
-              <svg class="w-svg" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
-                <defs>
-                  <linearGradient id="whaleFill" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#3bb5a2" />
-                    <stop offset="55%" stop-color="#1d5c54" />
-                    <stop offset="100%" stop-color="#123833" />
-                  </linearGradient>
-                </defs>
-                <path class="w-fluke" d="M1020 210 C1088 96 1192 78 1194 148 C1196 206 1128 248 1062 268 C1124 292 1190 348 1148 402 C1092 368 1036 330 992 292 Z" />
-                <path class="w-shape" d="M86 292 C74 214 168 132 292 128 C412 124 560 148 720 168 C846 184 948 198 1028 236 C1088 262 1124 292 1096 328 C1064 368 980 392 860 408 C700 428 520 438 360 418 C232 402 128 372 96 338 C78 318 80 304 86 292 Z" />
-                <path class="w-belly" d="M210 338 C320 368 520 392 760 378 C900 370 1008 348 1052 322 C1004 356 880 392 700 404 C500 418 320 402 210 338 Z" />
-                <path class="w-jaw" d="M96 300 C88 276 108 250 148 246 C128 268 118 292 128 318 C112 316 100 310 96 300 Z" />
-                <ellipse class="w-fin-svg" cx="430" cy="400" rx="92" ry="28" transform="rotate(-18 430 400)" />
-                <circle class="w-eye-svg" cx="214" cy="248" r="16" />
-                <circle class="w-pupil" cx="218" cy="250" r="7" />
-                <path class="w-spout-svg" d="M268 128 C272 72 248 36 268 18 C292 48 286 88 292 128" />
-              </svg>
-              <div class="w-train">
-                <span class="w-car w-engine"></span>
-                <span class="w-car"></span>
-                <span class="w-car"></span>
-                <span class="w-car"></span>
-                <span class="w-car"></span>
-              </div>
-              <div class="w-thief"></div>
-            </div>
-
-            <div class="biome biome-kitchen">
-              <div class="k-wall"></div>
-              <div class="k-tile"></div>
-              <div class="k-counter"></div>
-              <div class="k-banner">ON STRIKE</div>
-              <div class="k-knives">
-                <span></span><span></span><span></span><span></span><span></span>
-              </div>
-              <div class="k-pots">
-                <i></i><i></i><i></i>
-              </div>
-              <div class="k-steward"></div>
-            </div>
-
-            <div class="biome biome-gravity">
-              <div class="g-void"></div>
-              <div class="g-grid"></div>
-              <div class="g-city-up"></div>
-              <div class="g-city-down"></div>
-              <div class="g-slab"></div>
-              <div class="g-walker"></div>
-              <div class="g-orbs"><i></i><i></i><i></i></div>
-              <div class="g-clock">6:01</div>
-            </div>
-
-            <div class="biome biome-candy">
-              <div class="c-sky"></div>
-              <div class="c-moon">
-                <span class="c-bite"></span>
-                <span class="c-face"></span>
-              </div>
-              <div class="c-ladder">
-                <i></i><i></i><i></i><i></i><i></i>
-              </div>
-              <div class="c-crumbs"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-              <div class="c-eater"></div>
-            </div>
+        <div class="wrap">
+          <p class="eyebrow">The game studio that fits in a sentence</p>
+          <h1 id="hero-title">
+            Describe a game.<br />
+            It actually <em>runs</em>.
+          </h1>
+          <p class="lede">
+            Not a moodboard. A live world, a crew of AI collaborators, and a
+            link strangers can play.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#waitlist">Get early access</a>
+            <a class="btn btn-ghost" href="#how">See how it works</a>
           </div>
 
-          <div class="hero-overlay">
-            <div class="wrap hero-copy">
-              <p class="eyebrow">
-                <span class="live-dot" aria-hidden="true"></span>
-                The game studio that fits in a sentence
-              </p>
-              <h1 id="hero-title">
-                Describe a game.<br />
-                It actually <em class="hero-break">runs</em>.
-              </h1>
-              <p class="lede">
-                Not a moodboard. A live world, a crew of AI collaborators, and a
-                link strangers can play. Your git. Your editor. Your terminal.
-                Same powers.
-              </p>
-              <div class="hero-actions">
-                <a class="btn btn-primary" href="#waitlist">Get early access</a>
-                <a class="btn btn-ghost" href="#how">See how it works</a>
+          <figure class="studio" aria-label="Trike Studio — describe on the left, the world on the right">
+            <div class="studio-bar">
+              <span class="chrome-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="studio-title">
+                <img src="/brand/trike-mark-white.svg" width="14" height="15" alt="" />
+                Trike Studio
+              </span>
+              <span class="studio-meta"><span class="live-dot" aria-hidden="true"></span> live</span>
+            </div>
+            <div class="studio-body">
+              <div class="studio-rail">
+                <p class="rail-kicker">Session</p>
+                <p class="rail-line">
+                  <span>You</span>
+                  a heist on a train that is also a whale
+                </p>
+                <p class="rail-line rail-line-agent">
+                  <span>Trike</span>
+                  World is up. Keep talking.
+                </p>
+                <p class="rail-line">
+                  <span>You</span>
+                  make the dining car a courtroom
+                </p>
+                <p class="rail-line rail-line-ok">
+                  <span>Trike</span>
+                  Updated. Run still live.
+                </p>
+              </div>
+              <div class="door" aria-hidden="true">
+                <div class="door-glow"></div>
+                <div class="door-wash"></div>
+                <span class="door-jamb door-jamb-l"></span>
+                <span class="door-jamb door-jamb-r"></span>
+                <span class="door-lintel"></span>
+                <span class="door-sill"></span>
+                <p class="door-caption">The world</p>
               </div>
             </div>
-          </div>
-
-          <img class="poster-stamp" src="/brand/trike-mark-white.svg" width="48" height="50" alt="" />
-          <p class="poster-live"><span class="live-dot" aria-hidden="true"></span> Live world</p>
-          <p class="poster-title" data-world-title>a heist on a train that is also a whale</p>
-
-          <div class="prompt-bar">
-            <p class="prompt-label" id="world-label">Try a sentence</p>
-            <div class="chips" role="group" aria-labelledby="world-label">
-              <button type="button" class="chip is-on" data-world="whale" aria-pressed="true">
-                a heist on a train that is also a whale
-              </button>
-              <button type="button" class="chip" data-world="kitchen" aria-pressed="false">
-                a kitchen where the knives have unionized
-              </button>
-              <button type="button" class="chip" data-world="gravity" aria-pressed="false">
-                gravity is optional after 6pm
-              </button>
-              <button type="button" class="chip" data-world="candy" aria-pressed="false">
-                the moon is a puzzle you can eat
-              </button>
-            </div>
-          </div>
+          </figure>
         </div>
       </section>
 
       <section class="breath" aria-labelledby="breath-title">
         <div class="wrap">
           <h2 id="breath-title">
-            <span class="line-bone">Trike is a game studio</span>
-            <span class="line-amber">that fits in a sentence.</span>
+            Trike is a game studio<br />
+            <em>that fits in a sentence.</em>
           </h2>
           <p class="breath-copy" data-reveal>
             You describe the game. A world appears and keeps running. You steer
-            it in chat or in code. Collaborators — direction, structure, build,
-            critique, taste — work the same project you do. When it feels
-            expensive, you publish a URL. The repo stays yours.
-          </p>
-        </div>
-      </section>
-
-      <section class="sentence-band" aria-labelledby="sentence-title">
-        <div class="wrap">
-          <p class="section-kicker">In one breath</p>
-          <h2 id="sentence-title" class="visually-hidden">What you can do</h2>
-          <p class="sentence" data-reveal>
-            Trike is
-            <a href="#describe">describe a game</a>,
-            <a href="#world">watch a live world appear</a>,
-            <a href="#steer">steer it without killing the run</a>,
-            <a href="#crew">build with a whole AI crew</a>,
-            <a href="#polish">obsess over how it feels</a>,
-            <a href="#ship">ship a link people can play</a>,
-            and
-            <a href="#agents-too">let Cursor, Claude Code, or a terminal do the same</a>.
+            it in chat or in code. When it feels expensive, you publish a URL.
+            The repo stays yours.
           </p>
         </div>
       </section>
@@ -219,10 +140,7 @@
         <div class="wrap">
           <header class="section-head" data-reveal>
             <p class="section-kicker">How it works</p>
-            <h2 id="how-title">
-              <span class="line-bone">From a sentence</span>
-              <span class="line-amber">to a world people play.</span>
-            </h2>
+            <h2 id="how-title">From a sentence to a world people play.</h2>
           </header>
 
           <div class="story-layout">
@@ -236,7 +154,7 @@
                 <div class="prompt-sheet">
                   <p class="prompt-label">Describe a game</p>
                   <p class="prompt-body">a heist on a train that is also a whale</p>
-                  <p class="prompt-note">One field. No template picker. The world is the answer.</p>
+                  <p class="prompt-note">One field. The world is the answer.</p>
                 </div>
               </div>
 
@@ -244,21 +162,15 @@
                 <div class="chrome-bar">
                   <span class="chrome-dots" aria-hidden="true"><i></i><i></i><i></i></span>
                   <span class="chrome-title">Live world</span>
-                  <span class="chrome-meta"><span class="live-dot" aria-hidden="true"></span>running</span>
+                  <span class="chrome-meta"><span class="live-dot" aria-hidden="true"></span> running</span>
                 </div>
-                <div class="mini-biome mini-whale" aria-hidden="true">
-                  <svg class="w-svg" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMax meet">
-                    <path class="w-fluke" d="M1020 210 C1088 96 1192 78 1194 148 C1196 206 1128 248 1062 268 C1124 292 1190 348 1148 402 C1092 368 1036 330 992 292 Z" />
-                    <path class="w-shape" d="M86 292 C74 214 168 132 292 128 C412 124 560 148 720 168 C846 184 948 198 1028 236 C1088 262 1124 292 1096 328 C1064 368 980 392 860 408 C700 428 520 438 360 418 C232 402 128 372 96 338 C78 318 80 304 86 292 Z" />
-                    <path class="w-belly" d="M210 338 C320 368 520 392 760 378 C900 370 1008 348 1052 322 C1004 356 880 392 700 404 C500 418 320 402 210 338 Z" />
-                    <circle class="w-eye-svg" cx="214" cy="248" r="16" />
-                    <circle class="w-pupil" cx="218" cy="250" r="7" />
-                  </svg>
-                  <div class="w-train">
-                    <span class="w-car w-engine"></span>
-                    <span class="w-car"></span>
-                    <span class="w-car"></span>
-                  </div>
+                <div class="door door-compact" aria-hidden="true">
+                  <div class="door-glow"></div>
+                  <div class="door-wash"></div>
+                  <span class="door-jamb door-jamb-l"></span>
+                  <span class="door-jamb door-jamb-r"></span>
+                  <span class="door-lintel"></span>
+                  <span class="door-sill"></span>
                 </div>
               </div>
 
@@ -266,58 +178,39 @@
                 <div class="chrome-bar">
                   <span class="chrome-dots" aria-hidden="true"><i></i><i></i><i></i></span>
                   <span class="chrome-title">Steer</span>
-                  <span class="chrome-meta">chat · code · dials</span>
+                  <span class="chrome-meta">chat · code</span>
                 </div>
-                <div class="steer-grid">
-                  <pre class="code-pane" tabindex="0"><code><span class="code-dim">// the world is already running</span>
-<span>train.gravity = 0.4;</span>
-<span>whale.mood = "unbothered";</span>
-<span class="code-hot">heist.window = 12; <em>// you</em></span></code></pre>
-                  <div class="dial-stack">
-                    <label>Tension <input type="range" min="0" max="100" value="62" disabled /></label>
-                    <label>Light <input type="range" min="0" max="100" value="38" disabled /></label>
-                    <label>Scale <input type="range" min="0" max="100" value="81" disabled /></label>
-                    <p>Live controls. No Apply button. The run never restarts.</p>
-                  </div>
-                </div>
+                <pre class="code-pane" tabindex="0"><code><span class="code-dim">// the world is already running</span>
+<span>light.temperature = 3200;</span>
+<span>ending.meaner = true;</span>
+<span class="code-hot">place.held = true;</span></code></pre>
               </div>
 
               <div class="chrome story-mock" data-mock="crew">
                 <div class="chrome-bar">
                   <span class="chrome-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-                  <span class="chrome-title">Collaborators</span>
-                  <span class="chrome-meta">notes returned</span>
+                  <span class="chrome-title">Crew</span>
+                  <span class="chrome-meta">notes</span>
                 </div>
-                <div class="notes-card">
-                  <p class="notes-kicker">Notes on the last change</p>
-                  <p>The heist is readable. The whale is a setting, not a joke — keep it that way.</p>
-                  <p class="notes-aside">Someone should try to break the window timing on purpose before you ship.</p>
-                </div>
-              </div>
-
-              <div class="chrome story-mock" data-mock="polish">
-                <div class="chrome-bar">
-                  <span class="chrome-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-                  <span class="chrome-title">Feel</span>
-                  <span class="chrome-meta">not done</span>
-                </div>
-                <ul class="feel-list">
-                  <li class="is-on">jumps that forgive you</li>
-                  <li class="is-on">cameras that look ahead</li>
-                  <li>hits that you can feel</li>
-                  <li class="is-on">sound that drifts, slightly</li>
-                  <li>the thing a stranger notices first</li>
+                <ul class="notes">
+                  <li><span>Feel</span> Does this still read as a heist?</li>
+                  <li><span>Look</span> That wall is stock. Redo it.</li>
+                  <li><span>Play</span> A stranger would be lost here.</li>
                 </ul>
               </div>
 
               <div class="chrome story-mock" data-mock="ship">
                 <div class="chrome-bar chrome-bar-url">
                   <span class="url-pill">play.ontrike.com/heist-whale</span>
-                  <span class="chrome-meta"><span class="live-dot" aria-hidden="true"></span>live</span>
+                  <span class="chrome-meta"><span class="live-dot" aria-hidden="true"></span> live</span>
                 </div>
-                <div class="mini-biome mini-candy" aria-hidden="true">
-                  <div class="c-moon"><span class="c-bite"></span></div>
-                  <div class="c-ladder"><i></i><i></i><i></i></div>
+                <div class="door door-compact" aria-hidden="true">
+                  <div class="door-glow"></div>
+                  <div class="door-wash"></div>
+                  <span class="door-jamb door-jamb-l"></span>
+                  <span class="door-jamb door-jamb-r"></span>
+                  <span class="door-lintel"></span>
+                  <span class="door-sill"></span>
                 </div>
               </div>
             </div>
@@ -326,7 +219,7 @@
               <article class="story-step is-active" id="describe" data-story-step="describe">
                 <p class="idx">01</p>
                 <h3>You describe it</h3>
-                <p>One sentence. The impossible thing. What comes back is a running world — not a slideshow of frames.</p>
+                <p>One sentence. What comes back is a running world — not a slideshow of frames.</p>
               </article>
               <article class="story-step" id="world" data-story-step="world">
                 <p class="idx">02</p>
@@ -336,22 +229,17 @@
               <article class="story-step" id="steer" data-story-step="steer">
                 <p class="idx">03</p>
                 <h3>You steer without killing the run</h3>
-                <p>Chat, code, or live controls. Edits show up in the world that’s already going. No restart. No lost place.</p>
+                <p>Chat or code. Edits show up in the world that’s already going. No restart. No lost place.</p>
               </article>
               <article class="story-step" id="crew" data-story-step="crew">
                 <p class="idx">04</p>
                 <h3>A crew builds with you</h3>
-                <p>Not one chatbot with a hard hat. Direction, structure, implementation, critique, taste — plus people whose job is to polish, break, and doubt the work.</p>
-              </article>
-              <article class="story-step" id="polish" data-story-step="polish">
-                <p class="idx">05</p>
-                <h3>It has to feel expensive</h3>
-                <p>We’re building for AA feel, not a jam-weekend sprite. If a stranger can tell it was generated, we failed.</p>
+                <p>Feel, look, play. They do the unglamorous passes. You stay the director.</p>
               </article>
               <article class="story-step" id="ship" data-story-step="ship">
-                <p class="idx">06</p>
+                <p class="idx">05</p>
                 <h3>You ship a link</h3>
-                <p>Publish to play.ontrike.com. Strangers play first. You keep the git. Remix later.</p>
+                <p>Publish to play.ontrike.com. Strangers play first. You keep the git.</p>
               </article>
             </div>
           </div>
@@ -361,15 +249,11 @@
       <section class="agents-too" id="agents-too" aria-labelledby="agents-too-title">
         <div class="wrap">
           <header class="section-head" data-reveal>
-            <p class="section-kicker">Built for agents too</p>
-            <h2 id="agents-too-title">
-              <span class="line-bone">Studio is a client.</span>
-              <span class="line-amber">So is your terminal.</span>
-            </h2>
+            <p class="section-kicker">Same product, four doors</p>
+            <h2 id="agents-too-title">Studio, terminal, MCP, or API.</h2>
             <p class="section-lede">
-              Cursor, Claude Code, or anything that speaks MCP gets the same
-              powers as the in-product crew: project, build, playtest, art,
-              publish, live controls. Nothing is GUI-only.
+              The editor is the obvious one. It’s not the only one. Cursor,
+              Claude, or a terminal — same world, same crew, same ship.
             </p>
           </header>
 
@@ -395,7 +279,7 @@ trike probe</code></pre>
 
               <div class="tab-panel" role="tabpanel" id="panel-mcp" aria-labelledby="tab-mcp" data-panel="mcp" hidden>
                 <div class="snippet-head">
-                  <span>MCP client config</span>
+                  <span>MCP</span>
                   <button type="button" class="copy-btn" data-copy="mcp">Copy</button>
                 </div>
                 <pre class="snippet" tabindex="0"><code data-copy-target="mcp">{
@@ -405,21 +289,20 @@ trike probe</code></pre>
     }
   }
 }</code></pre>
-                <p class="snippet-note">Project, build, playtest, assets, publish, live controls — the same suite the studio agents get.</p>
+                <p class="snippet-note">Project, build, playtest, publish, live controls — the same suite Studio gets.</p>
               </div>
 
               <div class="tab-panel" role="tabpanel" id="panel-api" aria-labelledby="tab-api" data-panel="api" hidden>
                 <div class="snippet-head">
-                  <span>REST + SDK</span>
+                  <span>HTTP</span>
                   <button type="button" class="copy-btn" data-copy="api">Copy</button>
                 </div>
                 <pre class="snippet" tabindex="0"><code data-copy-target="api">POST /v1/games
 POST /v1/games/{id}/play
 POST /v1/games/{id}/publish
 
-# embed the player
-&lt;iframe src="https://play.ontrike.com/{id}"&gt;</code></pre>
-                <p class="snippet-note">HTTP, an SDK, and an embed. If you can call an API, you can ship a game.</p>
+iframe  https://play.ontrike.com/{id}</code></pre>
+                <p class="snippet-note">REST, an SDK, and an embed. If you can call an API, you can ship a game.</p>
               </div>
 
               <div class="tab-panel" role="tabpanel" id="panel-studio" aria-labelledby="tab-studio" data-panel="studio" hidden>
@@ -438,54 +321,14 @@ and keep going.</code></pre>
       </section>
 
       <section class="ambition" aria-labelledby="ambition-title">
-        <div class="wrap ambition-grid">
-          <div data-reveal>
-            <p class="section-kicker">The bar</p>
-            <h2 id="ambition-title">
-              <span class="line-bone">If it looks generated,</span>
-              <span class="line-amber">we failed.</span>
-            </h2>
-            <p class="section-lede">
-              We’re not shipping a toy that demos well in a GIF. The point is
-              games that feel directed — the kind you’d actually send to a
-              friend. Deterministic replays. Edits that don’t blow up the run.
-              Taste with a veto.
-            </p>
-          </div>
-          <ul class="ambition-points">
-            <li data-reveal>
-              <strong>Sentence → running game</strong>
-              <p>The preview is playable. That is the product, not a trailer.</p>
-            </li>
-            <li data-reveal>
-              <strong>The run survives the edit</strong>
-              <p>Ninety live swaps on an early spike. Place in the world held. About a second, worst case.</p>
-            </li>
-            <li data-reveal>
-              <strong>A crew, not a chatbot</strong>
-              <p>Jobs, taste, and the right to send work back. Your tools get those jobs too.</p>
-            </li>
-            <li data-reveal>
-              <strong>The git is yours</strong>
-              <p>Export. Commit. Leave. Come back. Agents don’t clobber the lines you wrote.</p>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="status" aria-labelledby="status-title">
-        <div class="wrap status-inner" data-reveal>
-          <p class="status-flag">
-            <span class="live-dot live-dot-build" aria-hidden="true"></span>
-            Building in public
+        <div class="wrap">
+          <p class="section-kicker">The bar</p>
+          <h2 id="ambition-title">If it looks generated, we failed.</h2>
+          <p class="section-lede" data-reveal>
+            Plenty of tools can sketch. The hard part is a world that holds
+            together when a stranger plays it — and a studio that doesn’t trap
+            the work inside a chat log. Git stays yours. The game stays yours.
           </p>
-          <div class="status-copy">
-            <h2 id="status-title">
-              <span class="line-bone">The studio is still being built.</span>
-              <span class="line-amber">You’re early on purpose.</span>
-            </h2>
-            <p>Waitlist now. Early access when the world is yours to break.</p>
-          </div>
         </div>
       </section>
 
@@ -493,13 +336,9 @@ and keep going.</code></pre>
         <div class="wrap waitlist-grid">
           <div class="waitlist-copy" data-reveal>
             <p class="section-kicker">Early access</p>
-            <h2 id="waitlist-title">
-              <span class="line-ink">Get in before</span>
-              <span class="line-coral">the first worlds ship.</span>
-            </h2>
+            <h2 id="waitlist-title">Get in before the first worlds ship.</h2>
             <p class="lede">
-              We’ll write when it’s ready to try. No drip. No circle of founders.
-              Just the note that it runs.
+              We’ll write when it’s ready to try. No drip. Just the note that it runs.
             </p>
           </div>
 
@@ -538,7 +377,7 @@ and keep going.</code></pre>
             </form>
             <div class="waitlist-success" data-waitlist-success hidden tabindex="-1">
               <p class="success-kicker">You’re on the list</p>
-              <p>We’ll write when it’s ready to try. Until then — keep naming impossible games.</p>
+              <p>We’ll write when it’s ready to try.</p>
             </div>
           </div>
         </div>
@@ -548,7 +387,7 @@ and keep going.</code></pre>
     <footer class="site-footer">
       <div class="wrap footer-inner">
         <a class="brand brand-footer" href="/" aria-label="Trike home">
-          <img class="brand-mark" src="/brand/trike-mark-white.svg" width="28" height="29" alt="" />
+          <img class="brand-mark" src="/brand/trike-mark-white.svg" width="22" height="23" alt="" />
           <span class="brand-word">Trike</span>
         </a>
         <p class="footer-meta">

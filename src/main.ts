@@ -1,8 +1,6 @@
 import "./styles.css";
 import { bindWaitlistForm } from "./waitlist";
 
-const WORLDS = ["whale", "kitchen", "gravity", "candy"] as const;
-
 function prefersReducedMotion(): boolean {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
@@ -17,60 +15,6 @@ function initNav(): void {
 
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
-}
-
-function initWorlds(): void {
-  const root = document.querySelector<HTMLElement>("[data-worlds]");
-  if (!root) return;
-
-  const chips = [...root.querySelectorAll<HTMLButtonElement>(".chip[data-world]")];
-  const biomes = [...root.querySelectorAll<HTMLElement>(".biome")];
-  const title = root.querySelector<HTMLElement>("[data-world-title]");
-  let index = 0;
-  let timer = 0;
-
-  const show = (world: string) => {
-    root.dataset.world = world;
-    chips.forEach((chip) => {
-      const on = chip.dataset.world === world;
-      chip.classList.toggle("is-on", on);
-      chip.setAttribute("aria-pressed", on ? "true" : "false");
-      if (on && title) {
-        title.textContent = chip.textContent?.trim() ?? "";
-      }
-    });
-    biomes.forEach((biome) => {
-      biome.classList.toggle("is-on", biome.classList.contains(`biome-${world}`));
-    });
-    const next = WORLDS.indexOf(world as (typeof WORLDS)[number]);
-    index = next === -1 ? 0 : next;
-  };
-
-  const stopCycle = () => {
-    window.clearInterval(timer);
-    timer = 0;
-  };
-
-  chips.forEach((chip) => {
-    chip.addEventListener("click", () => {
-      stopCycle();
-      show(chip.dataset.world ?? "whale");
-    });
-  });
-
-  const requested = new URLSearchParams(window.location.search).get("world");
-  const start =
-    requested && (WORLDS as readonly string[]).includes(requested)
-      ? requested
-      : (root.dataset.world ?? "whale");
-  show(start);
-
-  if (!prefersReducedMotion() && !requested) {
-    timer = window.setInterval(() => {
-      index = (index + 1) % WORLDS.length;
-      show(WORLDS[index]);
-    }, 4500);
-  }
 }
 
 function initReveal(): void {
@@ -178,7 +122,6 @@ function initWaitlists(): void {
 }
 
 initNav();
-initWorlds();
 initReveal();
 initStory();
 initTabs();
